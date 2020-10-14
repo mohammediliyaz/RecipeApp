@@ -12,25 +12,12 @@ function Navabar() {
   const handleClick = () => setClick(!click);
   const closeMobileMenu = () => setClick(false);
 
-  const onMouseEnter = () => {
+  const onMouseEnter = (d) => {
+    console.log(d);
     if (window.innerWidth < 960) {
       setDropdown(false);
     } else {
-      setDropdown(true);
-    }
-  };
-  const onMouseEnterDemo = () => {
-    if (window.innerWidth < 960) {
-      setDropdown(false);
-    } else {
-      setDropdown("Demo");
-    }
-  };
-  const onMouseEnterRecipe = () => {
-    if (window.innerWidth < 960) {
-      setDropdown(false);
-    } else {
-      setDropdown("Recipe");
+      setDropdown(d);
     }
   };
 
@@ -38,7 +25,7 @@ function Navabar() {
     if (window.innerWidth < 960) {
       setDropdown(false);
     } else {
-      setDropdown(false);
+      setDropdown("");
     }
   };
 
@@ -58,49 +45,45 @@ function Navabar() {
         </li>
         <li
           className="nav-item"
-          onMouseEnter={onMouseEnterDemo}
+          onMouseEnter={() => onMouseEnter("demo")}
           onMouseLeave={onMouseLeave}
         >
           <Link to="/demos" className="nav-links" onClick={closeMobileMenu}>
             Demos <i className="fas fa-caret-down" />
           </Link>
-          {dropdown === "Demo" && <Dropdown type="demo" />}
+          {dropdown === "demo" && <Dropdown type="demo" />}
         </li>
         <li
           className="nav-item"
-          onMouseEnter={onMouseEnterRecipe}
+          onMouseEnter={() => onMouseEnter("recipe")}
           onMouseLeave={onMouseLeave}
         >
           <Link to="/recipes" className="nav-links" onClick={closeMobileMenu}>
             Recipes <i className="fas fa-caret-down" />
           </Link>
-          {dropdown === "Recipe" && <Dropdown type="recipe" />}
+          {dropdown === "recipe" && <Dropdown type="recipe" />}
         </li>
         <li
           className="nav-item"
-          onMouseEnter={onMouseEnter}
+          onMouseEnter={() => onMouseEnter("pages")}
           onMouseLeave={onMouseLeave}
         >
           <Link to="/pages" className="nav-links" onClick={closeMobileMenu}>
             Pages <i className="fas fa-caret-down" />
           </Link>
-          {/* {dropdown && <Dropdown />} */}
+          {dropdown === "pages" && <Dropdown type="pages" />}
         </li>
         <li
           className="nav-item"
-          onMouseEnter={onMouseEnter}
+          onMouseEnter={() => onMouseEnter("shop")}
           onMouseLeave={onMouseLeave}
         >
           <Link to="/shop" className="nav-links" onClick={closeMobileMenu}>
             Shop <i className="fas fa-caret-down" />
           </Link>
-          {/* {dropdown && <Dropdown />} */}
+          {dropdown === "shop" && <Dropdown type="shop" />}
         </li>
-        <li
-          className="nav-item"
-          onMouseEnter={onMouseEnter}
-          onMouseLeave={onMouseLeave}
-        >
+        <li className="nav-item">
           <Link
             to="/submitRecipes"
             className="nav-links"

@@ -34,3 +34,35 @@ export const MenuItemsRecipe = [
     },
 ]
 
+export const MenuItemsShop = [
+    {
+        title: 'Shop',
+        path: '/girdHomepage',
+        cName: 'dropdown-link'
+    },
+    {
+        title: 'Poduct Page',
+        path: '/listHomepage',
+        cName: 'dropdown-link'
+    },
+    
+]
+
+export const MenuItemsPages = [
+    {
+        title: 'Shortcodes',
+        path: '/girdHomepage',
+        cName: 'dropdown-link'
+    },
+    {
+        title: 'Typography',
+        path: '/listHomepage',
+        cName: 'dropdown-link'
+    },
+    {
+        title: 'Contact',
+        path: '/boxedVersionHomepage',
+        cName: 'dropdown-link'
+    },
+]
+
