@@ -1,24 +1,28 @@
-import React, { Component } from "react";
-import { useState } from "react";
+import React, { useState } from "react";
 import logo from "../../Assets/images/chow.png";
 import Dropdown from "../Navbar/Dropdown";
 import { Link } from "react-router-dom";
 import "../Navbar/Navbar.css";
+import { Nav, MenuIcon, Img, Li } from "./Styles";
 
 function Navabar() {
   const [click, setClick] = useState(false);
   const [dropdown, setDropdown] = useState("");
+  const [homeHover, setHomehover] = useState(false);
 
   const handleClick = () => setClick(!click);
   const closeMobileMenu = () => setClick(false);
 
   const onMouseEnter = (d) => {
-    console.log(d);
     if (window.innerWidth < 960) {
       setDropdown(false);
     } else {
       setDropdown(d);
     }
+  };
+
+  const onMouseEnterHome = () => {
+    setHomehover(!homeHover);
   };
 
   const onMouseLeave = () => {
@@ -30,21 +34,27 @@ function Navabar() {
   };
 
   return (
-    <nav className="navbar">
-      <div className="logo">
+    <Nav>
+      <Img>
         <img src={logo} alt="logo" />
-      </div>
-      <div className="menu-icon" onClick={handleClick}>
+      </Img>
+      <MenuIcon onClick={handleClick}>
         <i className={click ? "fas fa-times" : "fas fa-bars"} />
-      </div>
+      </MenuIcon>
       <ul className={click ? "nav-menu active" : "nav-menu"}>
-        <li className="nav-item">
-          <Link to="/" className="nav-links" onClick={closeMobileMenu}>
+        <Li
+          onMouseEnter={() => onMouseEnterHome()}
+          onMouseLeave={onMouseEnterHome}
+        >
+          <Link
+            to="/Home"
+            className={homeHover ? "nav-links nav-links-border " : "nav-links "}
+            onClick={closeMobileMenu}
+          >
             Home
           </Link>
-        </li>
-        <li
-          className="nav-item"
+        </Li>
+        <Li
           onMouseEnter={() => onMouseEnter("demo")}
           onMouseLeave={onMouseLeave}
         >
@@ -52,9 +62,8 @@ function Navabar() {
             Demos <i className="fas fa-caret-down" />
           </Link>
           {dropdown === "demo" && <Dropdown type="demo" />}
-        </li>
-        <li
-          className="nav-item"
+        </Li>
+        <Li
           onMouseEnter={() => onMouseEnter("recipe")}
           onMouseLeave={onMouseLeave}
         >
@@ -62,9 +71,8 @@ function Navabar() {
             Recipes <i className="fas fa-caret-down" />
           </Link>
           {dropdown === "recipe" && <Dropdown type="recipe" />}
-        </li>
-        <li
-          className="nav-item"
+        </Li>
+        <Li
           onMouseEnter={() => onMouseEnter("pages")}
           onMouseLeave={onMouseLeave}
         >
@@ -72,9 +80,8 @@ function Navabar() {
             Pages <i className="fas fa-caret-down" />
           </Link>
           {dropdown === "pages" && <Dropdown type="pages" />}
-        </li>
-        <li
-          className="nav-item"
+        </Li>
+        <Li
           onMouseEnter={() => onMouseEnter("shop")}
           onMouseLeave={onMouseLeave}
         >
@@ -82,8 +89,8 @@ function Navabar() {
             Shop <i className="fas fa-caret-down" />
           </Link>
           {dropdown === "shop" && <Dropdown type="shop" />}
-        </li>
-        <li className="nav-item">
+        </Li>
+        <Li>
           <Link
             to="/submitRecipes"
             className="nav-links"
@@ -91,9 +98,9 @@ function Navabar() {
           >
             Submit Recipes
           </Link>
-        </li>
+        </Li>
       </ul>
-    </nav>
+    </Nav>
   );
 }
 

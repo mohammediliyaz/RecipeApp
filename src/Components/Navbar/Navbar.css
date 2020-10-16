@@ -1,22 +1,4 @@
-.navbar {
-  background-color: #fff;
-  height: 80px;
-  border: 1px solid red;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 1rem;
-}
-.logo {
-  margin-left: 10px;
-}
-.fa-firstdraft {
-  margin-left: 0.5rem;
-  font-size: 1.6rem;
-}
-
 .nav-menu {
-  border: 1px solid black;
   display: grid;
   grid-template-columns: repeat(6, auto);
   grid-gap: 10px;
@@ -27,18 +9,15 @@
   margin-right: 2rem;
 }
 
-.nav-item {
-  display: flex;
-  align-items: center;
-  height: 80px;
-}
-
 .nav-links {
   color: black;
   text-decoration: none;
   padding: 0.5rem 1rem;
 }
 
+.nav-links-border {
+  border-bottom: 1px solid #8dc63f;
+}
 .fa-bars {
   color: black;
 }
@@ -47,65 +26,30 @@
   display: none;
 }
 
-.menu-icon {
-  display: none;
-}
-
 @media screen and (max-width: 960px) {
-  .NavbarItems {
-    position: relative;
-  }
-  .logo {
-    position: absolute;
-    left: 1rem;
-  }
-
   .nav-menu {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    height: 90vh;
-    position: absolute;
-    top: 80px;
-    opacity: 1;
-    transition: all 0.5s ease;
+    display: none;
   }
 
   .nav-menu.active {
-    background: #f0f0f0;
-    left: 0;
-    opacity: 1;
-    transition: all 0.5s ease;
-    z-index: 1;
-  }
-
-  .nav-links {
-    text-align: center;
-    padding: 2rem;
+    display: flex;
+    flex-direction: column;
     width: 100%;
-    display: table;
+
+    position: absolute;
+    top: 65px;
+    opacity: 0.8;
+    transition: all 0.5s ease;
+    background: #f0f0f0;
+  }
+  .nav-links {
+    font-weight: bold;
+    flex-grow: 1;
   }
 
   .nav-links:hover {
-    background-color: #1888ff;
+    background-color: #8dc63f;
     border-radius: 0;
-  }
-
-  .navbar-logo {
-    position: absolute;
-    top: 0;
-    left: 0;
-    transform: translate(25%, 50%);
-  }
-
-  .menu-icon {
-    display: block;
-    position: absolute;
-    top: 0;
-    right: 0;
-    transform: translate(-100%, 60%);
-    font-size: 1.8rem;
-    cursor: pointer;
   }
 
   .fa-times {
@@ -120,7 +64,7 @@
     margin: 2rem auto;
     border-radius: 4px;
     width: 80%;
-    background: #1888ff;
+    background: #8dc63f;
     text-decoration: none;
     color: #fff;
     font-size: 1.5rem;
@@ -128,7 +72,6 @@
 
   .nav-links-mobile:hover {
     background: #fff;
-    color: #1888ff;
     transition: 250ms;
   }
 }

@@ -11,7 +11,7 @@ export const MenuItemsDemo = [
     },
     {
         title: 'Boxed Version',
-        path: '/boxedVersionHomepage',
+        path: '/boxedVersion',
         cName: 'dropdown-link'
     },
 ]
@@ -19,17 +19,17 @@ export const MenuItemsDemo = [
 export const MenuItemsRecipe = [
     {
         title: 'Browse Recipes',
-        path: '/girdHomepage',
+        path: '/BrowseRecipes',
         cName: 'dropdown-link'
     },
     {
         title: 'Recipe page 1',
-        path: '/listHomepage',
+        path: '/Recipepage1',
         cName: 'dropdown-link'
     },
     {
         title: 'Recipe page 2',
-        path: '/boxedVersionHomepage',
+        path: '/Recipepage12',
         cName: 'dropdown-link'
     },
 ]
@@ -37,12 +37,12 @@ export const MenuItemsRecipe = [
 export const MenuItemsShop = [
     {
         title: 'Shop',
-        path: '/girdHomepage',
+        path: '/Shop',
         cName: 'dropdown-link'
     },
     {
-        title: 'Poduct Page',
-        path: '/listHomepage',
+        title: 'Product Page',
+        path: '/ProductPage',
         cName: 'dropdown-link'
     },
     
@@ -51,17 +51,17 @@ export const MenuItemsShop = [
 export const MenuItemsPages = [
     {
         title: 'Shortcodes',
-        path: '/girdHomepage',
+        path: '/Shortcodes',
         cName: 'dropdown-link'
     },
     {
         title: 'Typography',
-        path: '/listHomepage',
+        path: '/Typography',
         cName: 'dropdown-link'
     },
     {
         title: 'Contact',
-        path: '/boxedVersionHomepage',
+        path: '/Contact',
         cName: 'dropdown-link'
     },
 ]

@@ -5,19 +5,18 @@ import {
   MenuItemsShop,
   MenuItemsPages,
 } from "./MenuItems";
-// import { MenuItemsRecipe } from "./MenuItemsRecipe";
+
 import { Link } from "react-router-dom";
 import "./Dropdown.css";
 
 function Dropdown(props) {
-  console.log("props got", props.type);
   const [click, setClick] = useState(false);
   const handleClick = () => setClick(!click);
 
   const enumerate = (list) => {
     return list.map((item, index) => {
       return (
-        <li>
+        <li key={item.title + index}>
           <Link
             className={item.cName}
             to={item.path}
