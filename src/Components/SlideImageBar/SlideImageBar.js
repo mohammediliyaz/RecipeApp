@@ -1,7 +1,7 @@
-import React, { useState } from "react";
+import React from "react";
 
 import { Img } from "./Styles";
-import { imageList } from "../SlideImageBar/ImageSet";
+import { imageList } from "./ImageSet";
 import Discription from "./Discription";
 
 export default function SlideImageBar(props) {
@@ -11,12 +11,18 @@ export default function SlideImageBar(props) {
   console.log(obj.src);
 
   return (
-    <div>
+    <div style={{ background: "#333" }}>
       <Img
-        src={obj.src !== undefined ? obj.src : imageList[0].src}
+        src={props.image !== undefined ? props.image : imageList[0].src}
         alt="img1"
       ></Img>
-      <Discription />
+      <Discription
+        recipeType={props.recipeType}
+        recipeName={props.recipeName}
+        serveNumber={props.serveNumber}
+        serveTime={props.serveTime}
+        chef={props.chef}
+      />
     </div>
   );
 }

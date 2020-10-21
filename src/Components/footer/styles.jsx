@@ -55,6 +55,9 @@ export const Input = styled.input`
     padding:10px;
     background-color:#3a3a3a;
     border:none;
+    &:focus{
+      outline:none;
+    }
     
 
 `;

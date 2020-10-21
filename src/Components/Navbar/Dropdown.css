@@ -14,12 +14,13 @@
   color: #505050;
   cursor: pointer;
   background: #6b6b6b;
+  position: relative;
+  z-index: 3;
 }
 
 .dropdown-menu li:hover {
   background: #505050;
 }
-
 .dropdown-menu.clicked {
   display: none;
 }

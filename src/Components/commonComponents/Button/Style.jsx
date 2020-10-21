@@ -11,7 +11,7 @@ border:none;
     outline:none;
 }
 &:hover{
-    cursor:pointer;
+    cursor: pointer;
     background-color:lightgray;
 }
-`
+`;
