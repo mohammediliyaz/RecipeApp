@@ -9,7 +9,7 @@ export default function Search(props) {
   let searched = "";
   const [suggestions, setSuggestions] = useState([]);
 
-  const ChandgeHandler = (e) => {
+  const ChangeHandler = (e) => {
     setSearchText(e.target.value);
     setSuggestions(getSuggestions(e.target.value));
   };
@@ -47,7 +47,7 @@ export default function Search(props) {
           width: "11.6rem",
         }}
         value={searchText}
-        onChange={(e) => ChandgeHandler(e)}
+        onChange={(e) => ChangeHandler(e)}
       ></Input>
       <Button type="button" onClick={clickHandler}>
         <i className="fa fa-search"></i>

@@ -1,13 +1,13 @@
 export const Ingridentset = {
   one: "2 pounds cubed beef stew meat",
-  2: "4 cubes beef bouillon, crumbled",
-  3: "1 large onion, chopped",
-  4: "2 teaspoon dried rosemary",
-  5: "2 teaspoon ground black pepper",
-  6: " 1 large potatoes, peeled and cubed",
-  7: "2 carrots, cut into 1 inch pieces",
-  8: "2 pounds cubed beef stew meat",
-  9: "2 stalks celery, cut into 1 inch pieces",
+  two: "4 cubes beef bouillon, crumbled",
+  three: "1 large onion, chopped",
+  four: "2 teaspoon dried rosemary",
+  five: "2 teaspoon ground black pepper",
+  six: " 1 large potatoes, peeled and cubed",
+  seven: "2 carrots, cut into 1 inch pieces",
+  eight: "2 pounds cubed beef stew meat",
+  nine: "2 stalks celery, cut into 1 inch pieces",
 };
 
 export const Directionset = {

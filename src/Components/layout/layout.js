@@ -7,25 +7,23 @@ import RecipeService from "../../Service/RecipeService";
 import Search from "./Search";
 import Author from "../Author/Author";
 import PopularRecipe from "../PopularRecipe/PopularRecipe";
-import axios from 'axios'
+import axios from "axios";
 
 export default function Layout() {
   const [search, setSearch] = useState("All");
   const [idata, setData] = useState([]);
   useEffect(() => {
-    axios.get(`https://my-food-recipe.firebaseio.com/.json`)
-    .then(res => {
-      const v= Object.values(res.data.RecipeList);
+    axios.get(`https://my-food-recipe.firebaseio.com/.json`).then((res) => {
+      const v = Object.values(res.data.RecipeList);
       setData(v);
-      
-    })
+    });
   }, [idata]);
- 
+
   const clickHandler = (searchRecipe) => {
     setSearch(searchRecipe);
   };
   const displayCards = () => {
-    if (idata.length !== 0 ) {
+    if (idata.length !== 0) {
       const filteredList = idata.filter((e) =>
         search === "All" ? true : e.name === search
       );
@@ -33,7 +31,7 @@ export default function Layout() {
         return (
           <Cards
             recipe={recipe.name}
-            image={recipe.image}
+            image={recipe.bannerimage}
             rating={recipe.rating}
             time={recipe.min}
           />
@@ -46,10 +44,7 @@ export default function Layout() {
     <Div>
       <div className="left">{displayCards()}</div>
       <div className="right">
-        <Search
-          clickHandler={clickHandler}
-          searchList={RecipeService.getData()}
-        />
+        <Search clickHandler={clickHandler} searchList={idata} />
         <Author />
         <PopularRecipe />
       </div>

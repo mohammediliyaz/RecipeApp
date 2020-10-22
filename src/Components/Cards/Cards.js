@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import img1 from "../../Assets/images/recipeThumb-01.jpg";
+import img1 from "../../Assets/images/recipeThumb-02.jpg";
 import { Viewbutton } from "./Styles";
 import { Img } from "./Styles";
 import { Div } from "./Styles";
@@ -11,8 +11,8 @@ export default function Cards(props) {
   return (
     <Div>
       <Img
-        src={img1}
-        alt="img"
+        src={require(`../../Assets/images/${props.image}.jpg`)}
+        alt=""
         onMouseEnter={() => setShow(!show)}
         onMouseLeave={() => setShow(show)}
       />

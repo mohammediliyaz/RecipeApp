@@ -5,11 +5,13 @@ export const Div = styled.div`
   position: relative;
   width: 240px;
   height: 100%;
+
+  background-color: rgb(248, 248, 248);
 `;
 
 export const Img = styled.img`
   width: 100%;
-  height: 187x;
+  height: 187px;
   z-index: 1;
   &:hover {
     z-index: 1;
@@ -22,11 +24,11 @@ export const Img = styled.img`
 export const Viewbutton = styled.button`
   top: 90px;
   left: 58px;
-
+  z-index: 2;
   position: absolute;
-  border: 3px solid #fff;
+  border: 0;
 
-  background-color: rgba(255, 255, 255, 0.2);
+  background-color: rgb(0, 0, 0, 0.5);
   color: #fff;
   font-size: 14px;
   font-weight: 700;

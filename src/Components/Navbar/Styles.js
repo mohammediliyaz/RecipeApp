@@ -1,7 +1,8 @@
 import styled from "styled-components";
+import { theme } from "../../Theme/Theme";
 
 export const Nav = styled.nav`
-  background-color: #fff;
+  background-color: ${(props) => theme.backgroundColors.white};
   height: 80px;
   display: flex;
   justify-content: center;
