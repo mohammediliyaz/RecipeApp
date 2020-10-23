@@ -8,14 +8,14 @@ export default function Directions(props) {
     <DirectionsStyle>
       <h1>Directions</h1>
       {
-        <ul>
+        <ol>
           {DirectionsValue.map((e) => (
-            <label>
-              {e} <br></br>
+            <li style={{ margin: "20px" }}>
+              {e}
               <br></br>
-            </label>
+            </li>
           ))}
-        </ul>
+        </ol>
       }
     </DirectionsStyle>
   );

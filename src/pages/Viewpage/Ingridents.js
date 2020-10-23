@@ -14,6 +14,7 @@ export default function Ingridents(props) {
             <label>
               <input type="checkbox" class="strikethrough" value="1" />
               <span>{e}</span> <br></br>
+              <br></br>
             </label>
           ))}
         </ul>

@@ -58,7 +58,9 @@ export default function Viewrecipe() {
             scelerisque bibendum. Aenean ullamcorper neque ac tristique semper.
             Phasellus enim mauris, mollis vulputate blandit in, ornare sed leo.
           </div>
+
           <Ingridents Ingridentset={Ingridentset} />
+
           <Directions Directionset={Directionset} />
         </div>
         <div>

@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Div, Section, Input, LoginButtons, Button } from "./Styles";
+import { Div, Section, Input, LoginButtons, Button, Img } from "./Styles";
 import { InputPass } from "./Styles";
 import img from "../../Assets/images/loginimage.jpeg";
 import history from "../../history/History";
@@ -37,9 +37,8 @@ export default function Login() {
   const gotoHOme = () => history.push("/home");
   return (
     <Div>
-      <div>
-        <img src={img} style={{ width: "100%" }} />
-      </div>
+      <Img src={img} />
+
       <Section>
         <h1>Login</h1>
         <form>

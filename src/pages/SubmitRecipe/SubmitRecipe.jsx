@@ -2,8 +2,7 @@ import React, { useState } from "react";
 import { Button } from "../../Components/commonComponents/Button/Style";
 import Footer from "../../Components/Footer/Footer";
 import Navabar from "../../Components/Navbar/Navbar";
-import { Div, Form, Input } from "./Styles";
-import "../SubmitRecipe/styles.css";
+import { Div, Form, Input, TextArea } from "./Styles";
 
 function SubmitRecipe() {
   const [recipeName, setrecipeName] = useState("");
@@ -123,8 +122,7 @@ function SubmitRecipe() {
         </label>
         <label>
           Discription <br></br>
-          <textarea
-            id="w3review"
+          <TextArea
             rows="10"
             cols="136"
             type="text-area"

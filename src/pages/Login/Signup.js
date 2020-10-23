@@ -1,5 +1,13 @@
 import React, { useState } from "react";
-import { Div, Section, Input, LoginButtons, Button, InputPass } from "./Styles";
+import {
+  Div,
+  Section,
+  Input,
+  LoginButtons,
+  Button,
+  InputPass,
+  Img,
+} from "./Styles";
 import history from "../../history/History";
 import img from "../../Assets/images/loginimage.jpeg";
 
@@ -72,9 +80,7 @@ export default function Signup() {
 
   return (
     <Div>
-      <div>
-        <img src={img} style={{ width: "100%", height: "100%" }} />
-      </div>
+      <Img src={img} />
       <Section>
         <h1>Signup</h1>
         <form>
