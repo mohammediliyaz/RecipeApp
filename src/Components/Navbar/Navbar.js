@@ -22,10 +22,6 @@ function Navabar() {
     }
   };
 
-  const onMouseEnterHome = () => {
-    setHomehover(!homeHover);
-  };
-
   const onMouseLeave = () => {
     if (window.innerWidth < 960) {
       setDropdown(false);
@@ -43,10 +39,7 @@ function Navabar() {
         <i className={click ? "fas fa-times" : "fas fa-bars"} />
       </MenuIcon>
       <ul className={click ? "nav-menu active" : "nav-menu"}>
-        <Li
-          onMouseEnter={() => onMouseEnterHome()}
-          onMouseLeave={onMouseEnterHome}
-        >
+        <Li>
           <Link
             className={homeHover ? "nav-links nav-links-border " : "nav-links "}
             onClick={() => history.push("/home")}

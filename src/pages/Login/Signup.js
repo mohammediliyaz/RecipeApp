@@ -55,7 +55,20 @@ export default function Signup() {
     if (password !== repeatpassword) {
       alert("passwords does not match");
     }
+
+    const postData = {
+      email: email,
+      index: password,
+      name: name,
+      userName: username,
+    };
+    console.log(postData);
   };
+  // useEffect(() => {
+  //   axios.post(`https://my-food-recipe.firebaseio.com/.json`,data).then((postData) => {
+  //     console.log(postData)
+  //   });
+  // }, []);
 
   return (
     <Div>

@@ -2,11 +2,21 @@ import React, { useState } from "react";
 import img1 from "../../Assets/images/recipeThumb-02.jpg";
 import { Viewbutton } from "./Styles";
 import { Img } from "./Styles";
-import { Div } from "./Styles";
+import { Div, H2 } from "./Styles";
 import history from "../../history/History";
 
 export default function Cards(props) {
   const [show, setShow] = useState(false);
+
+  const callStars = () => {
+    let ret = [];
+    for (let i = 0; i < props.rating; i++) {
+      ret.push(
+        <i className="fa fa-star" style={{ color: "rgb(255, 199, 65)" }}></i>
+      );
+    }
+    return ret;
+  };
 
   return (
     <Div>
@@ -22,12 +32,12 @@ export default function Cards(props) {
         </Viewbutton>
       )}
 
-      <h2>{props.recipe}</h2>
+      <H2>{props.recipe}</H2>
       <p>
         <i className="fa fa-clock"></i>
-        {props.time} {" MIN"}
+        {props.time}
       </p>
-      <p>{props.rating}</p>
+      <p>Ratings : {callStars()}</p>
     </Div>
   );
 }

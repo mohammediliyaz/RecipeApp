@@ -7,6 +7,12 @@ export const Div = styled.div`
   height: 100%;
 
   background-color: rgb(248, 248, 248);
+  @media screen and (max-width: 480px) {
+    width: 100%;
+  }
+`;
+export const H2 = styled.h2`
+  font-family: ${(props) => props.theme.fontFamily.Arvo};
 `;
 
 export const Img = styled.img`

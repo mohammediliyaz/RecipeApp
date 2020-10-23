@@ -15,9 +15,6 @@
   padding: 0.5rem 1rem;
 }
 
-.nav-links-border {
-  border-bottom: 1px solid #8dc63f;
-}
 .fa-bars {
   color: black;
 }
@@ -35,7 +32,7 @@
     display: flex;
     flex-direction: column;
     width: 100%;
-
+    z-index: 10;
     position: absolute;
     top: 65px;
     opacity: 0.8;

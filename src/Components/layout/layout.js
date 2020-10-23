@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 
-import { Div } from "./Styles";
+import { Div, Left, Right } from "./Styles";
 import "./Style.css";
 import Cards from "../Cards/Cards";
 import RecipeService from "../../Service/RecipeService";
@@ -42,12 +42,12 @@ export default function Layout() {
 
   return (
     <Div>
-      <div className="left">{displayCards()}</div>
-      <div className="right">
+      <Left>{displayCards()}</Left>
+      <Right>
         <Search clickHandler={clickHandler} searchList={idata} />
         <Author />
         <PopularRecipe />
-      </div>
+      </Right>
     </Div>
   );
 }

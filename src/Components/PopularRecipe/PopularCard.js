@@ -5,6 +5,16 @@ import { Entity, Content, Img, Contentr, Button } from "./Styles";
 
 function PopularCard(props) {
   const [show, setShow] = useState(false);
+  const callStars = () => {
+    let ret = [];
+    for (let i = 0; i < props.rating; i++) {
+      ret.push(
+        <i className="fa fa-star" style={{ color: "rgb(255, 199, 65)" }}></i>
+      );
+    }
+    return ret;
+  };
+
   return (
     <div>
       <Entity>
@@ -19,7 +29,7 @@ function PopularCard(props) {
           </Button>
         )}
         <Content>{props.recipe}</Content>
-        <Contentr>{props.rating}</Contentr>
+        <Contentr>{callStars()}</Contentr>
       </Entity>
     </div>
   );

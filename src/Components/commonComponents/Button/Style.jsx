@@ -1,17 +1,16 @@
 import styled from "styled-components";
-
+import { theme } from "../../../Theme/Theme";
 
 export const Button = styled.button`
-padding:10px;
-color:white;
-background-color:#8dc63f;
-transition: all 0.2s ease-in-out;
-border:none;
-&:focus{
-    outline:none;
-}
-&:hover{
+  padding: 10px;
+  color: ${(props) => props.theme.colors.white};
+  background-color: ${(props) => props.theme.color};
+  transition: all 0.2s ease-in-out;
+  border: none;
+  &:focus {
+    outline: none;
+  }
+  &:hover {
     cursor: pointer;
-    background-color:lightgray;
-}
+  }
 `;

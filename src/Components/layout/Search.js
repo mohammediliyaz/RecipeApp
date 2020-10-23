@@ -2,6 +2,7 @@ import React, { useState } from "react";
 
 import { Button } from "../commonComponents/Button/Style";
 import { Input } from "../Footer/styles";
+import { SearchDiv } from "./Styles";
 
 export default function Search(props) {
   const lists = props.searchList;
@@ -35,7 +36,7 @@ export default function Search(props) {
         );
   };
   return (
-    <div>
+    <SearchDiv>
       <Input
         type="text"
         autocomplete="on"
@@ -56,6 +57,6 @@ export default function Search(props) {
         suggestions.map((e) => (
           <label onClick={(e) => selectedRecipe(e)}>{e.recipeName}</label>
         ))}
-    </div>
+    </SearchDiv>
   );
 }

@@ -6,6 +6,9 @@ export const Div = styled.div`
   height: 19rem;
   padding: 22px;
   border: 1px solid lightgray;
+  @media screen and (max-width: 768px) {
+    display: none;
+  }
 `;
 export const Img = styled.img`
   width: 64px;

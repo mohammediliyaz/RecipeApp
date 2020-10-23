@@ -5,9 +5,9 @@
   list-style: none;
   text-align: start;
 }
-.dropdown-menu li:first-child {
+/* .dropdown-menu li:first-child {
   border-top: 2px solid #8dc63f;
-}
+} */
 
 .dropdown-menu li {
   border-bottom: 1px solid #808080;

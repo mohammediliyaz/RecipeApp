@@ -15,11 +15,18 @@ export const Img = styled.img`
 
 export const DivBar = styled.div`
   display: flex;
-  justify-content: space-around;
+
+  border-size: border-box;
   padding: 20px;
-  margin: -21px 8rem 0 8rem;
+  flex-grow: 1;
+  margin: -21px 8rem 0 7.8rem;
   @media screen and (max-width: 970px) {
     display: grid;
+    margin: 0;
+    padding: 5px;
+  }
+  @media screen and (max-width: 425px) {
+    display: none;
   }
 `;
 
@@ -31,6 +38,11 @@ export const DivDiscrption = styled.div`
   left: 200px;
   height: 350px;
   z-index: 2;
+  @media screen and (max-width: 970px) {
+    top: 120px;
+    left: 10px;
+    width: 300px;
+  }
 `;
 
 export const RecipeName = styled.h1`

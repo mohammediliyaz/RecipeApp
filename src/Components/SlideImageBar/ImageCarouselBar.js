@@ -3,12 +3,13 @@ import { Button } from "../commonComponents/Button/Style";
 import { DivBar } from "./Styles";
 
 export default function ImageCarouselBar(props) {
- const dat=[...props.data].splice(0,4);
+  const dat = [...props.data].splice(0, 4);
 
   const display = () => {
-    if (dat !==undefined && dat.length !== 0) {
+    if (dat !== undefined && dat.length !== 0) {
       return dat.map((button) => (
         <Button
+          style={{ fontSize: "20px" }}
           onClick={() =>
             props.clickHandler({
               imageName: button.bannerimage,
