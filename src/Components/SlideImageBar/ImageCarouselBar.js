@@ -7,8 +7,9 @@ export default function ImageCarouselBar(props) {
 
   const display = () => {
     if (dat !== undefined && dat.length !== 0) {
-      return dat.map((button) => (
+      return dat.map((button, Index) => (
         <Button
+          key={Index}
           style={{ fontSize: "20px" }}
           onClick={() =>
             props.clickHandler({

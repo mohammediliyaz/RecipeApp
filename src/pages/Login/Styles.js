@@ -27,6 +27,7 @@ export const Section = styled.section`
 
 export const Input = styled.input`
   width: 90%;
+  color: ${(props) => props.theme.colors.green};
   padding: 10px;
   &:focus {
     outline: none;
@@ -82,4 +83,9 @@ height=100%;
 @media screen and (max-width: 425px) {
   display:none;
 }
+`;
+
+export const H1 = styled.h1`
+  font-family: ${(props) => props.theme.fontFamily.Arvoserif};
+  color: ${(props) => props.theme.colors.Zambezi};
 `;

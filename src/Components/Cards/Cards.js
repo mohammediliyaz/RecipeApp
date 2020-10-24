@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import img1 from "../../Assets/images/recipeThumb-02.jpg";
+
 import { Viewbutton } from "./Styles";
 import { Img } from "./Styles";
 import { Div, H2 } from "./Styles";

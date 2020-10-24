@@ -1,24 +1,40 @@
 import React, { useState, useEffect } from "react";
-import { Div, Section, Input, LoginButtons, Button, Img } from "./Styles";
+import { Div, Section, Input, LoginButtons, Button, Img, H1 } from "./Styles";
 import { InputPass } from "./Styles";
 import img from "../../Assets/images/loginimage.jpeg";
 import history from "../../history/History";
 import axios from "axios";
 export default function Login() {
-  const [data, setData] = useState([]);
-  const [email, setEmail] = useState();
-  const [pass, setPass] = useState();
+  const [email, setEmail] = useState("");
+  const [pass, setPass] = useState("");
   const [hidden, setHidden] = useState(true);
   const handleDisplay = () => {
     setHidden(!hidden);
   };
 
-  useEffect(() => {
-    axios.get(`https://my-food-recipe.firebaseio.com/.json`).then((res) => {
-      const v = Object.values(res.data.Users);
-      setData(v);
-    });
-  }, []);
+  const handleLogin = () => {
+    const postData = {
+      email: email,
+      password: pass,
+      returnSecureToken: true,
+    };
+
+    return axios
+      .post(
+        "https://www.googleapis.com/identitytoolkit/v3/relyingparty/verifyPassword?key=AIzaSyBBTcBYXnaAmM1YEg6QLpggdBscZJXVJfk",
+        postData
+      )
+      .then((res) => {
+        console.log(res);
+        if (res.status === 200) {
+          localStorage.setItem("key", res.data.localId);
+          history.push("/home");
+        } else {
+          alert("not found");
+        }
+      })
+      .catch((error) => console.log(error));
+  };
 
   const handleEmail = (e) => {
     setEmail(e.target.value);
@@ -26,26 +42,18 @@ export default function Login() {
   const handlePass = (e) => {
     setPass(e.target.value);
   };
-  const z = data.map(() => {
-    const v = Object.entries(data);
-    console.log(v);
-  });
-  const handleLogin = () => {
-    const found = data.find((element) => element.email === email);
-    found ? gotoHOme() : alert("email not found");
-  };
-  const gotoHOme = () => history.push("/home");
+
   return (
     <Div>
       <Img src={img} />
 
       <Section>
-        <h1>Login</h1>
+        <H1>Login</H1>
         <form>
-          <h1>Email</h1>
+          <H1>Email</H1>
           <Input type="text" placeholder="Email" onChange={handleEmail} />
 
-          <h1>Password</h1>
+          <H1>Password</H1>
           <Input
             type={hidden ? "password" : "text"}
             placeholder="Password"
@@ -61,7 +69,7 @@ export default function Login() {
           >
             Login
           </Button>
-          <Button type="button" onClick={() => history.push("/")}>
+          <Button type="button" onClick={() => history.push("/Signup")}>
             Sign Up
           </Button>
         </LoginButtons>

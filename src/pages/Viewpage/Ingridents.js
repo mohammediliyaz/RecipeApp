@@ -7,7 +7,7 @@ export default function Ingridents(props) {
   const IngredientsValue = Object.values(props.Ingridentset);
   return (
     <IngredientsStyle>
-      <h1>Ingredients</h1>
+      <h1 style={{ color: "#606060", fontFamily: "Arvo" }}>Ingredients</h1>
       {
         <ul>
           {IngredientsValue.map((e) => (

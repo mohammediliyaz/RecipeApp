@@ -14,9 +14,10 @@ export default function PopularRecipe() {
     });
   }, []);
 
-  return data.map((data) => {
+  return data.map((data, Index) => {
     return (
       <PopularCard
+        key={Index}
         recipe={data.name}
         image={data.bannerimage}
         rating={data.rating}

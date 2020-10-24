@@ -42,7 +42,7 @@ export default function Search(props) {
         autocomplete="on"
         placeholder="search for recipes"
         style={{
-          "background-color": "white",
+          backgroundColor: "white",
           border: "1px solid lightgray",
           padding: "10px",
           width: "11.6rem",

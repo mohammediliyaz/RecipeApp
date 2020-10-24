@@ -11,9 +11,9 @@ export default function Routing() {
   return (
     <Router history={history}>
       <Switch>
-        <Route path={"/"} exact strict component={Signup} />
+        <Route path={"/"} exact strict component={Login} />
         <Route path={"/Home"} exact component={Home} />
-        <Route path={"/login"} exact strict component={Login} />
+        <Route path={"/signup"} exact strict component={Signup} />
         <Route path={"/submitRecipes"} exact strict component={SubmitRecipe} />
         <Route path={"/Recipepage1"} exact strict component={ViewRecipe} />
       </Switch>

@@ -7,9 +7,11 @@ import {
   Button,
   InputPass,
   Img,
+  H1,
 } from "./Styles";
 import history from "../../history/History";
 import img from "../../Assets/images/loginimage.jpeg";
+import axios from "axios";
 
 export default function Signup() {
   const [name, setName] = useState("");
@@ -66,37 +68,46 @@ export default function Signup() {
 
     const postData = {
       email: email,
-      index: password,
-      name: name,
-      userName: username,
+      password: password,
+      returnSecureToken: true,
     };
     console.log(postData);
+
+    axios
+      .post(
+        "https://www.googleapis.com/identitytoolkit/v3/relyingparty/signupNewUser?key=AIzaSyBBTcBYXnaAmM1YEg6QLpggdBscZJXVJfk",
+        postData
+      )
+      .then((res) => {
+        console.log("signup ", res);
+        if (res.status === 200) {
+          history.push("/");
+        } else {
+          alert("Not success");
+        }
+      })
+      .catch((error) => console.log(error));
   };
-  // useEffect(() => {
-  //   axios.post(`https://my-food-recipe.firebaseio.com/.json`,data).then((postData) => {
-  //     console.log(postData)
-  //   });
-  // }, []);
 
   return (
     <Div>
       <Img src={img} />
       <Section>
-        <h1>Signup</h1>
+        <H1>Signup</H1>
         <form>
-          <h1>Name</h1>
+          <H1>Name</H1>
           <Input type="text" placeholder="Name" onChange={handleName} />
-          <h1>Email</h1>
+          <H1>Email</H1>
           <Input type="text" placeholder="Email" onChange={handleEmail} />
-          <h1>UserName</h1>
+          <H1>UserName</H1>
           <Input type="text" placeholder="UserName" onChange={handleUsername} />
-          <h1>Password</h1>
+          <H1>Password</H1>
           <Input
             type={hidden ? "password" : "text"}
             placeholder="Password"
             onChange={handlePassword}
           />
-          <h1>Repeat Password</h1>
+          <H1>Repeat Password</H1>
           <Input
             type={hidden ? "password" : "text"}
             onChange={handleRepeatPassword}
@@ -111,7 +122,7 @@ export default function Signup() {
           >
             Sign Up
           </Button>
-          <Button type="button" onClick={() => history.push("/login")}>
+          <Button type="button" onClick={() => history.push("/")}>
             Sign In
           </Button>
         </LoginButtons>

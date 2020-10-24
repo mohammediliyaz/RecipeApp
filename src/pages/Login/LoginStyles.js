@@ -35,3 +35,7 @@ export const Button = styled.button`
     outline: none;
   }
 `;
+export const H1 = styled.h1`
+  font-family: ${(props) => props.theme.fontFamily.Arvoserif};
+  color: ${(props) => props.theme.colors.Zambezi};
+`;

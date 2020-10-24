@@ -18,6 +18,7 @@ export const Div = styled.div`
 `;
 export const Form = styled.form`
   margin: 10px 10rem 0 10rem;
+  font-family: ${(props) => props.theme.fontFamily.Opensans};
 
   @media screen and (max-width: 1024px) {
     margin: 8px 8rem 0 8rem;

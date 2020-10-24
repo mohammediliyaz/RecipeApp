@@ -15,6 +15,7 @@ export const Img = styled.img`
 
 export const DivBar = styled.div`
   display: flex;
+  font-family: ${(props) => props.theme.fontFamily.Opensans};
 
   border-size: border-box;
   padding: 20px;
@@ -32,7 +33,7 @@ export const DivBar = styled.div`
 
 export const DivDiscrption = styled.div`
   width: 350px;
-
+  font-family: ${(props) => props.theme.fontFamily.Arvoserif};
   position: absolute;
   top: 120px;
   left: 200px;

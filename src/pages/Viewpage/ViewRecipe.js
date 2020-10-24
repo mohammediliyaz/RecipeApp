@@ -21,7 +21,9 @@ export default function Viewrecipe() {
       <Div>
         <div>
           <Title>
-            <h1>Mexican Grilled Corn Recipe</h1>
+            <h1 style={{ color: "#606060", fontFamily: "Arvo" }}>
+              Mexican Grilled Corn Recipe
+            </h1>
             <div id="container"> </div>
           </Title>
           <Img
@@ -66,6 +68,9 @@ export default function Viewrecipe() {
         <div>
           <Search />
           <Author />
+          <h3 style={{ color: "#606060", fontFamily: "Arvo" }}>
+            Popular Recipes
+          </h3>
           <PopularRecipe />
         </div>
       </Div>

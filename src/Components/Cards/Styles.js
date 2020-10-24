@@ -5,7 +5,8 @@ export const Div = styled.div`
   position: relative;
   width: 240px;
   height: 100%;
-
+  font-family: ${(props) => props.theme.fontFamily.Arvoserif};
+  color: ${(props) => props.theme.colors.Zambezi};
   background-color: rgb(248, 248, 248);
   @media screen and (max-width: 480px) {
     width: 100%;

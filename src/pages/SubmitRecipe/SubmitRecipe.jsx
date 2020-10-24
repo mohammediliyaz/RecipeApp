@@ -42,7 +42,7 @@ function SubmitRecipe() {
   const handleprepartionTime = (e) => {
     setpreparationTime(e.target.value);
   };
-  const bordercolor = () => {};
+
   const handleButton = () => {
     const info = [
       recipeName,
@@ -57,13 +57,29 @@ function SubmitRecipe() {
     ];
 
     info.every((e) => (e === "" ? alert(" field is empty") : true));
+    const postRecipeData = {
+      calories: calories,
+      cooking: cookingTime,
+      chef: chef,
+      description: discription,
+      min: prepartionTime,
+      name: recipeName,
+      rating: rating,
+      servings: servings,
+    };
+    console.log(postRecipeData);
   };
+  // useEffect(() => {
+  //   axios.post(`https://my-food-recipe.firebaseio.com/.json`,data).then((postRecipeData) => {
+  //     console.log(postRecipeData)
+  //   });
+  // }, []);
 
   return (
     <div>
       <Navabar />
       <Div>
-        <h1>Submit Recipe</h1>
+        <h1 style={{ color: "#606060", fontFamily: "Arvo" }}>Submit Recipe</h1>
       </Div>
       <Form>
         <label>

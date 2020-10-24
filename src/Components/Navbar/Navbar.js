@@ -40,56 +40,56 @@ function Navabar() {
       </MenuIcon>
       <ul className={click ? "nav-menu active" : "nav-menu"}>
         <Li>
-          <Link
+          <p
             className={homeHover ? "nav-links nav-links-border " : "nav-links "}
             onClick={() => history.push("/home")}
           >
             Home
-          </Link>
+          </p>
         </Li>
         <Li
           onMouseEnter={() => onMouseEnter("demo")}
           onMouseLeave={onMouseLeave}
         >
-          <Link className="nav-links" onClick={closeMobileMenu}>
+          <p className="nav-links" onClick={closeMobileMenu}>
             Demos <i className="fas fa-caret-down" />
-          </Link>
+          </p>
           {dropdown === "demo" && <Dropdown type="demo" />}
         </Li>
         <Li
           onMouseEnter={() => onMouseEnter("recipe")}
           onMouseLeave={onMouseLeave}
         >
-          <Link className="nav-links" onClick={closeMobileMenu}>
+          <p className="nav-links" onClick={closeMobileMenu}>
             Recipes <i className="fas fa-caret-down" />
-          </Link>
+          </p>
           {dropdown === "recipe" && <Dropdown type="recipe" />}
         </Li>
         <Li
           onMouseEnter={() => onMouseEnter("pages")}
           onMouseLeave={onMouseLeave}
         >
-          <Link className="nav-links" onClick={closeMobileMenu}>
+          <p className="nav-links" onClick={closeMobileMenu}>
             Pages <i className="fas fa-caret-down" />
-          </Link>
+          </p>
           {dropdown === "pages" && <Dropdown type="pages" />}
         </Li>
         <Li
           onMouseEnter={() => onMouseEnter("shop")}
           onMouseLeave={onMouseLeave}
         >
-          <Link className="nav-links" onClick={closeMobileMenu}>
+          <p className="nav-links" onClick={closeMobileMenu}>
             Shop <i className="fas fa-caret-down" />
-          </Link>
+          </p>
           {dropdown === "shop" && <Dropdown type="shop" />}
         </Li>
         <Li>
-          <Link
+          <p
             className="nav-links"
             onClick={() => history.push("/submitRecipes")}
           >
             Submit Recipes
-          </Link>
+          </p>
         </Li>
       </ul>
     </Nav>

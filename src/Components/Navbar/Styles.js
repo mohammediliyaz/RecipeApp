@@ -3,11 +3,12 @@ import { theme } from "../../Theme/Theme";
 
 export const Nav = styled.nav`
   background-color: ${(props) => theme.backgroundColors.white};
+  font-family: ${(props) => props.theme.fontFamily.Arvoserif};
+  font-size: ${(props) => props.theme.fontSizes.primary};
   height: 80px;
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 1rem;
 `;
 
 export const MenuIcon = styled.div`
