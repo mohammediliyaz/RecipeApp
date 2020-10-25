@@ -29,6 +29,10 @@ export const Input = styled.input`
   width: 90%;
   color: ${(props) => props.theme.colors.green};
   padding: 10px;
+  position: relative;
+  border: none;
+  outline: none;
+  border-bottom: 1px solid green;
   &:focus {
     outline: none;
   }
@@ -71,10 +75,56 @@ export const Button = styled.button`
     font-size: 13px;
   }
 `;
-export const InputPass = styled.p`
+export const InputPassone = styled.p`
+  position: absolute;
+  right: 40px;
+  top: 518px;
   &:hover {
     color: green;
     cursor: pointer;
+  }
+  @media screen and (max-width: 768px) {
+    top: 419px;
+    right: 18px;
+  }
+  @media screen and (max-width: 425px) {
+    right: 150px;
+    top: 410px;
+  }
+  @media screen and (max-width: 375px) {
+    right: 100px;
+    top: 410px;
+  }
+  @media screen and (max-width: 320px) {
+    right: 100px;
+    top: 400px;
+    font-size: 13px;
+  }
+`;
+export const InputPasstwo = styled.p`
+  position: absolute;
+  right: 40px;
+  top: 619px;
+  &:hover {
+    color: green;
+    cursor: pointer;
+  }
+  @media screen and (max-width: 768px) {
+    top: 520px;
+    right: 18px;
+  }
+  @media screen and (max-width: 425px) {
+    right: 150px;
+    top: 510px;
+  }
+  @media screen and (max-width: 375px) {
+    right: 100px;
+    top: 510px;
+  }
+  @media screen and (max-width: 320px) {
+    right: 100px;
+    top: 495px;
+    font-size: 13px;
   }
 `;
 export const Img = styled.img`

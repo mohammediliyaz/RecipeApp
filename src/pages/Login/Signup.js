@@ -5,7 +5,8 @@ import {
   Input,
   LoginButtons,
   Button,
-  InputPass,
+  InputPassone,
+  InputPasstwo,
   Img,
   H1,
 } from "./Styles";
@@ -19,10 +20,14 @@ export default function Signup() {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [repeatpassword, setRepeatPassword] = useState("");
-  const [hidden, setHidden] = useState(true);
+  const [hiddenone, setHiddenone] = useState(true);
+  const [hiddentwo, setHiddentwo] = useState(true);
 
-  const handleDisplay = () => {
-    setHidden(!hidden);
+  const handleDisplaypasswordone = () => {
+    setHiddenone(!hiddenone);
+  };
+  const handleDisplaypasswordtwo = () => {
+    setHiddentwo(!hiddentwo);
   };
   const handleUsername = (e) => {
     setUsername(e.target.value);
@@ -103,16 +108,21 @@ export default function Signup() {
           <Input type="text" placeholder="UserName" onChange={handleUsername} />
           <H1>Password</H1>
           <Input
-            type={hidden ? "password" : "text"}
+            type={hiddenone ? "password" : "text"}
             placeholder="Password"
             onChange={handlePassword}
           />
           <H1>Repeat Password</H1>
           <Input
-            type={hidden ? "password" : "text"}
+            type={hiddentwo ? "password" : "text"}
             onChange={handleRepeatPassword}
           />
-          <InputPass onClick={handleDisplay}>Show/Hide</InputPass>
+          <InputPassone onClick={handleDisplaypasswordone}>
+            Show/Hide
+          </InputPassone>
+          <InputPasstwo onClick={handleDisplaypasswordtwo}>
+            Show/Hide
+          </InputPasstwo>
         </form>
         <LoginButtons>
           <Button

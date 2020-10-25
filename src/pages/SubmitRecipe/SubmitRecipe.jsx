@@ -1,8 +1,9 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Button } from "../../Components/commonComponents/Button/Style";
 import Footer from "../../Components/Footer/Footer";
 import Navabar from "../../Components/Navbar/Navbar";
 import { Div, Form, Input, TextArea } from "./Styles";
+import axios from "axios";
 
 function SubmitRecipe() {
   const [recipeName, setrecipeName] = useState("");
@@ -42,6 +43,17 @@ function SubmitRecipe() {
   const handleprepartionTime = (e) => {
     setpreparationTime(e.target.value);
   };
+
+
+ 
+    axios
+      .get(`https://my-food-recipe.firebaseio.com/.json`)
+      .then((res) => {
+        console.log(res);
+        
+      })
+      .catch((error) => console.log(error));
+
 
   const handleButton = () => {
     const info = [

@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Div, Section, Input, LoginButtons, Button, Img, H1 } from "./Styles";
-import { InputPass } from "./Styles";
+import { InputPassLogin } from "./LoginStyles";
 import img from "../../Assets/images/loginimage.jpeg";
 import history from "../../history/History";
 import axios from "axios";
@@ -59,7 +59,7 @@ export default function Login() {
             placeholder="Password"
             onChange={handlePass}
           />
-          <InputPass onClick={handleDisplay}>Show/Hide</InputPass>
+          <InputPassLogin onClick={handleDisplay}>Show/Hide</InputPassLogin>
         </form>
         <LoginButtons>
           <Button

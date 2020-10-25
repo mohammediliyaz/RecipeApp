@@ -11,7 +11,7 @@ export const Title = styled.div`
 
   background-color: rgb(248, 248, 248);
   position: absolute;
-  top: 220px;
+  top: 221px;
   width: 49rem;
 
   @media screen and (max-width: 1440px) {
