@@ -9,8 +9,8 @@ export default function Directions(props) {
       <h1 style={{ color: "#606060", fontFamily: "Arvo" }}>Directions</h1>
       {
         <ol>
-          {DirectionsValue.map((e) => (
-            <li style={{ margin: "20px" }}>
+          {DirectionsValue.map((e, Index) => (
+            <li key={Index} style={{ margin: "20px" }}>
               {e}
               <br></br>
             </li>

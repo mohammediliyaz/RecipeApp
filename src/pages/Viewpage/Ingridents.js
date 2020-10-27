@@ -10,9 +10,9 @@ export default function Ingridents(props) {
       <h1 style={{ color: "#606060", fontFamily: "Arvo" }}>Ingredients</h1>
       {
         <ul>
-          {IngredientsValue.map((e) => (
-            <label>
-              <input type="checkbox" class="strikethrough" value="1" />
+          {IngredientsValue.map((e, Index) => (
+            <label key={Index}>
+              <input type="checkbox" className="strikethrough" value="1" />
               <span>{e}</span> <br></br>
               <br></br>
             </label>
