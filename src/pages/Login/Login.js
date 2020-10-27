@@ -27,7 +27,7 @@ export default function Login() {
       .then((res) => {
         console.log(res);
         if (res.status === 200) {
-          localStorage.setItem("key", res.data.localId);
+          sessionStorage.setItem("key", res.data.localId);
           history.push("/home");
         }
       })

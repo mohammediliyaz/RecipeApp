@@ -8,12 +8,11 @@ export default function SlideImageBar(props) {
   const output = imageList.find((e) => e.imageName === props.image);
   let obj = {};
   Object.assign(obj, output);
-  console.log(obj.src);
 
   return (
     <div style={{ background: "#333" }}>
       <Img
-        src={props.image !== undefined ? props.image : imageList[0].src}
+        src={props.image !== undefined ? props.image : false}
         alt="img1"
       ></Img>
       <Discription

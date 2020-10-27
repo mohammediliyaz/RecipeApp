@@ -6,7 +6,7 @@ export default function PopularRecipe() {
   const [data, setData] = useState([]);
 
   useEffect(() => {
-    axios.get(`https://my-food-recipe.firebaseio.com/.json`).then((res) => {
+    axios.get(`https://foodrecipejson.firebaseio.com/.json`).then((res) => {
       const v = Object.values(res.data.RecipeList);
       v.sort((a, b) => (Number(a.rating) > Number(b.rating) ? -1 : 1));
       const newdata = v.slice(0, 3);

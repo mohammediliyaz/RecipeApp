@@ -12,7 +12,7 @@ export default function Layout() {
   const [search, setSearch] = useState("All");
   const [idata, setData] = useState([]);
   useEffect(() => {
-    axios.get(`https://my-food-recipe.firebaseio.com/.json`).then((res) => {
+    axios.get(`https://foodrecipejson.firebaseio.com/.json`).then((res) => {
       const v = Object.values(res.data.RecipeList);
       setData(v);
     });

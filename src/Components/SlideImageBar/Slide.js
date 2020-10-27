@@ -24,7 +24,7 @@ export default function Slide() {
   };
 
   useEffect(() => {
-    axios.get(`https://my-food-recipe.firebaseio.com/.json`).then((res) => {
+    axios.get(`https://foodrecipejson.firebaseio.com/.json`).then((res) => {
       const v = Object.values(res.data.RecipeList);
       setData(v);
       setRecipeInSlide(v[0]);

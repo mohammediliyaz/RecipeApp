@@ -4,6 +4,8 @@ import Footer from "../../Components/Footer/Footer";
 import Navabar from "../../Components/Navbar/Navbar";
 import { Div, Form, Input, TextArea } from "./Styles";
 import axios from "axios";
+import sliderA_01 from "../../Assets/images/sliderA_01.jpg";
+import image from "../../Assets/images/recipeThumb-01.jpg";
 
 function SubmitRecipe() {
   const [recipeName, setrecipeName] = useState("");
@@ -44,18 +46,14 @@ function SubmitRecipe() {
     setpreparationTime(e.target.value);
   };
 
+  // axios
+  //   .get(`https://my-food-recipe.firebaseio.com/.json`)
+  //   .then((res) => {
+  //     console.log(res);
+  //   })
+  //   .catch((error) => console.log(error));
 
- 
-    axios
-      .get(`https://my-food-recipe.firebaseio.com/.json`)
-      .then((res) => {
-        console.log(res);
-        
-      })
-      .catch((error) => console.log(error));
-
-
-  const handleButton = () => {
+  const validation = () => {
     const info = [
       recipeName,
       prepartionTime,
@@ -67,20 +65,38 @@ function SubmitRecipe() {
       rating,
       discription,
     ];
-
-    info.every((e) => (e === "" ? alert(" field is empty") : true));
-    const postRecipeData = {
-      calories: calories,
-      cooking: cookingTime,
-      chef: chef,
-      description: discription,
-      min: prepartionTime,
-      name: recipeName,
-      rating: rating,
-      servings: servings,
-    };
-    console.log(postRecipeData);
+    let validate = false;
+    info.every((e) =>
+      e === "" ? alert(" field is empty") : (validate = true)
+    );
+    return validate;
   };
+
+  const handleButton = () => {
+    if (validation()) {
+      const postData = {
+        bannerimage: sliderA_01,
+        calories: calories,
+        chef: chef,
+        cooking: cookingTime,
+        discription: discription,
+        image: image,
+        min: prepartionTime,
+        name: recipeName,
+        rating: rating,
+        servings: servings,
+        tag: recipeCategory,
+      };
+      return axios
+        .post("https://foodrecipejson.firebaseio.com/.json", postData)
+        .then((res) => {
+          console.log(res);
+          console.log(postData);
+        })
+        .catch((error) => console.log(error));
+    }
+  };
+
   // useEffect(() => {
   //   axios.post(`https://my-food-recipe.firebaseio.com/.json`,data).then((postRecipeData) => {
   //     console.log(postRecipeData)
@@ -149,7 +165,7 @@ function SubmitRecipe() {
           <br></br>
         </label>
         <label>
-          Discription <br></br>
+          discription <br></br>
           <TextArea
             rows="10"
             cols="136"
