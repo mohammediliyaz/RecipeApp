@@ -5,7 +5,7 @@ export const Blue = styled.div`
   height: 15px;
   margin-top: 6px;
   width: 15px;
-  background-color: ${(props) => theme.backgroundColors.blue};
+  background-color: ${() => theme.backgroundColors.blue};
 `;
 
 export const Green = styled.div`

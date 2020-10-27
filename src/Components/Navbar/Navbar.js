@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import logo from "../../Assets/images/chow.png";
 import Dropdown from "../Navbar/Dropdown";
-import { Link } from "react-router-dom";
 import "../Navbar/Navbar.css";
 import { Nav, MenuIcon, Img, Li } from "./Styles";
 import history from "../../history/History";

@@ -18,7 +18,7 @@ export default function Login() {
       password: pass,
       returnSecureToken: true,
     };
-
+    console.log("called");
     return axios
       .post(
         "https://www.googleapis.com/identitytoolkit/v3/relyingparty/verifyPassword?key=AIzaSyBBTcBYXnaAmM1YEg6QLpggdBscZJXVJfk",
@@ -29,11 +29,9 @@ export default function Login() {
         if (res.status === 200) {
           localStorage.setItem("key", res.data.localId);
           history.push("/home");
-        } else {
-          alert("not found");
         }
       })
-      .catch((error) => console.log(error));
+      .catch(() => alert("Not found"));
   };
 
   const handleEmail = (e) => {
