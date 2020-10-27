@@ -5,9 +5,9 @@ import { imageList } from "./ImageSet";
 import Discription from "./Discription";
 
 export default function SlideImageBar(props) {
-  const output = imageList.find((e) => e.imageName === props.image);
-  let obj = {};
-  Object.assign(obj, output);
+  // const output = imageList.find((e) => e.imageName === props.image);
+  // let obj = {};
+  // Object.assign(obj, output);
 
   return (
     <div style={{ background: "#333" }}>

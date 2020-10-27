@@ -9,24 +9,31 @@ import PopularRecipe from "../PopularRecipe/PopularRecipe";
 import axios from "axios";
 
 export default function Layout() {
-  const [search, setSearch] = useState("All");
   const [idata, setData] = useState([]);
+  const [filtered, setFiltered] = useState([]);
   useEffect(() => {
     axios.get(`https://foodrecipejson.firebaseio.com/.json`).then((res) => {
       const v = Object.values(res.data.RecipeList);
       setData(v);
+      setFiltered(v);
     });
-  }, [idata]);
+  }, []);
 
-  const clickHandler = (searchRecipe) => {
-    setSearch(searchRecipe);
+  const getSuggestions = (value) => {
+    const inputValue = value.trim().toLowerCase();
+    const inputLength = inputValue.length;
+
+    return inputLength === 0
+      ? []
+      : setFiltered(idata.filter((e) => e.name.toLowerCase().includes(value)));
   };
+  const clickHandler = (searchRecipe) => {
+    getSuggestions(searchRecipe);
+  };
+
   const displayCards = () => {
-    if (idata.length !== 0) {
-      const filteredList = idata.filter((e) =>
-        search === "All" ? true : e.name === search
-      );
-      return filteredList.map((recipe, Index) => {
+    if (filtered.length !== 0) {
+      return filtered.map((recipe, Index) => {
         return (
           <Cards
             key={Index}

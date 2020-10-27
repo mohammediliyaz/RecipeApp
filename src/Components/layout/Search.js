@@ -38,6 +38,7 @@ export default function Search(props) {
 
   const ChangeHandler = (e) => {
     setSearchText(e.target.value);
+    props.clickHandler(e.target.value);
     console.log("searched", searchText);
   };
 
