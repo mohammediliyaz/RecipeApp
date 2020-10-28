@@ -1,5 +1,5 @@
 import React from "react";
-import { Ingridentset } from "./Dataset";
+
 import { IngredientsStyle } from "./Styles";
 import "../Viewpage/Styles.css";
 

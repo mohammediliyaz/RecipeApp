@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { Div, Section, Input, LoginButtons, Button, Img, H1 } from "./Styles";
 import { InputPassLogin } from "./LoginStyles";
 import img from "../../Assets/images/loginimage.jpeg";

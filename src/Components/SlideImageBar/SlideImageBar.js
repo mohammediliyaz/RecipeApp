@@ -1,7 +1,7 @@
 import React from "react";
 
 import { Img } from "./Styles";
-import { imageList } from "./ImageSet";
+
 import Discription from "./Discription";
 
 export default function SlideImageBar(props) {

@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import { Button } from "../commonComponents/Button/Style";
 import { DivBar } from "./Styles";
 

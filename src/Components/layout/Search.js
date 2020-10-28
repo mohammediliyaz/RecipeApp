@@ -5,7 +5,6 @@ import { Input } from "../Footer/styles";
 import { SearchDiv } from "./Styles";
 
 export default function Search(props) {
-  const lists = props.searchList;
   const [searchText, setSearchText] = useState("");
 
   const ChangeHandler = (e) => {

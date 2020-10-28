@@ -4,11 +4,10 @@ import Footer from "../../Components/Footer/Footer";
 import Navabar from "../../Components/Navbar/Navbar";
 import { Div, Form, Input, TextArea } from "./Styles";
 import axios from "axios";
-import sliderA_01 from "../../Assets/images/sliderA_01.jpg";
 
 function SubmitRecipe() {
   let recipeLength;
-  let img;
+
   const [recipeName, setrecipeName] = useState("");
   const [prepartionTime, setpreparationTime] = useState("");
   const [cookingTime, setcookingTime] = useState("");
@@ -69,7 +68,6 @@ function SubmitRecipe() {
   useEffect(() => {
     axios.get(`https://foodrecipejson.firebaseio.com/.json`).then((res) => {
       const v = res.data.RecipeList;
-      const img = res.data.RecipeList[0].image;
       recipeLength = v.length;
     });
   });
@@ -101,6 +99,9 @@ function SubmitRecipe() {
         )
         .then((res) => {
           console.log(res);
+          if (res.status === 200) {
+            alert("successfully submitted!");
+          }
         })
         .catch((error) => console.log(error));
     }

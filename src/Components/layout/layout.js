@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 
 import { Div, Left, Right } from "./Styles";
-import "./Style.css";
+
 import Cards from "../Cards/Cards";
 import Search from "./Search";
 import Author from "../Author/Author";

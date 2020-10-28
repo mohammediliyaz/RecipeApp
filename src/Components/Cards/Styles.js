@@ -44,4 +44,5 @@ export const Viewbutton = styled.button`
   width: 130px;
   text-align: center;
   transition: all 0.2s ease-in-out !important;
+  cursor: pointer;
 `;

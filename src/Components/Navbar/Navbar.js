@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import logo from "../../Assets/images/chow.png";
 import Dropdown from "../Navbar/Dropdown";
 import "../Navbar/Navbar.css";
