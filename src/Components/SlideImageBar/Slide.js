@@ -10,14 +10,11 @@ export default function Slide() {
   const [data, setData] = useState([]);
 
   const clickHandler = (arg) => {
-    console.log(arg);
     if (data !== undefined && data.length !== 0) {
       const selectedRecipe = data.find((ele) => ele.name === arg.recipeName);
-      console.log(
-        "Recipe name:" + arg.recipeName + " and object is:" + selectedRecipe
-      );
+
       const keyed = selectedRecipe.bannerimage;
-      console.log("banner image is:", images[keyed]);
+
       setImage(images[keyed]);
       setRecipeInSlide(selectedRecipe);
     }
@@ -28,7 +25,6 @@ export default function Slide() {
       const v = Object.values(res.data.RecipeList);
       setData(v);
       setRecipeInSlide(v[0]);
-      console.log("current recipe updated", recipeInSlide);
       const keyed = v[0].bannerimage;
       setImage(images[keyed]);
       clickHandler(v[0]);

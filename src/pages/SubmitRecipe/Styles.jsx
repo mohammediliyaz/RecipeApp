@@ -18,6 +18,7 @@ export const Div = styled.div`
 `;
 export const Form = styled.form`
   margin: 10px 10rem 0 10rem;
+
   font-family: ${(props) => props.theme.fontFamily.Opensans};
 
   @media screen and (max-width: 1024px) {
@@ -35,7 +36,6 @@ export const Form = styled.form`
 `;
 export const Input = styled.input`
   width: 95%;
-  margin: 15px;
   padding: 10px;
   &:focus {
     outline: none;
@@ -43,5 +43,19 @@ export const Input = styled.input`
 `;
 
 export const TextArea = styled.textarea`
+  padding: 10px;
   width: 95%;
+  &:focus {
+    outline: none;
+  }
+`;
+export const Span = styled.span`
+  margin-left: 10px;
+  color: red;
+  font-size: 13px;
+`;
+export const H2 = styled.h2`
+  font-size: 18px;
+  color: ${(props) => props.theme.colors.Zambezi};
+  font-family: ${(props) => props.theme.fontFamily.Opensans};
 `;

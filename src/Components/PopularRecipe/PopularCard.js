@@ -9,7 +9,11 @@ function PopularCard(props) {
     let ret = [];
     for (let i = 0; i < props.rating; i++) {
       ret.push(
-        <i className="fa fa-star" style={{ color: "rgb(255, 199, 65)" }}></i>
+        <i
+          key={i}
+          className="fa fa-star"
+          style={{ color: "rgb(255, 199, 65)" }}
+        ></i>
       );
     }
     return ret;

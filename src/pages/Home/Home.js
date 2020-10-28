@@ -7,7 +7,7 @@ import Slide from "../../Components/SlideImageBar/Slide";
 import history from "../../history/History";
 
 export default function Home() {
-  const allow = sessionStorage.getItem("key");
+  const allow = localStorage.getItem("key");
   const display = () => {
     if (allow)
       return (

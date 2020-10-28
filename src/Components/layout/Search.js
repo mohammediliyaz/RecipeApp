@@ -10,12 +10,8 @@ export default function Search(props) {
   const ChangeHandler = (e) => {
     setSearchText(e.target.value);
     props.clickHandler(e.target.value);
-    console.log("searched", searchText);
   };
 
-  const clickHandler = () => {
-    console.log("clicked search butoon");
-  };
   return (
     <SearchDiv>
       <Input
@@ -31,7 +27,7 @@ export default function Search(props) {
         value={searchText}
         onChange={(e) => ChangeHandler(e)}
       ></Input>
-      <Button type="button" onClick={clickHandler}>
+      <Button type="button">
         <i className="fa fa-search"></i>
       </Button>
     </SearchDiv>

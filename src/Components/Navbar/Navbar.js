@@ -12,6 +12,9 @@ function Navabar() {
 
   const handleClick = () => setClick(!click);
   const closeMobileMenu = () => setClick(false);
+  const logout = () => {
+    localStorage.removeItem("key");
+  };
 
   const onMouseEnter = (d) => {
     if (window.innerWidth < 960) {
@@ -88,6 +91,17 @@ function Navabar() {
             onClick={() => history.push("/submitRecipes")}
           >
             Submit Recipes
+          </p>
+        </Li>
+        <Li>
+          <p
+            className="nav-links"
+            onClick={() => {
+              history.push("/");
+              logout();
+            }}
+          >
+            Logout
           </p>
         </Li>
       </ul>

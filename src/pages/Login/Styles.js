@@ -140,3 +140,9 @@ export const H1 = styled.h1`
   font-family: ${(props) => props.theme.fontFamily.Arvoserif};
   color: ${(props) => props.theme.colors.Zambezi};
 `;
+
+export const Span = styled.span`
+  color: red;
+  font-size: 16px;
+  padding: 4px;
+`;
