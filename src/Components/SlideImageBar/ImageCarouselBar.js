@@ -1,8 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
 // import { Button } from "../commonComponents/Button/Style";
 import { DivBar, Button } from "./Styles";
 
 export default function ImageCarouselBar(props) {
+  // const [color, setColor] = useState(false);
+  // const [select, setSelect] = useState();
   const dat = [...props.data].splice(0, 4);
 
   const display = () => {
@@ -10,7 +12,6 @@ export default function ImageCarouselBar(props) {
       return dat.map((button, Index) => (
         <Button
           key={Index}
-          style={{ fontSize: "20px" }}
           onClick={() => {
             props.clickHandler({
               imageName: button.bannerimage,
@@ -21,6 +22,8 @@ export default function ImageCarouselBar(props) {
               chef: button.chef,
               num: button.servings,
             });
+            // setSelect(button.name);
+            // setColor(!color);
           }}
         >
           {button.name}

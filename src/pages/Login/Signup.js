@@ -108,7 +108,7 @@ export default function Signup() {
         <form>
           <H1>Name</H1>
           <Input type="text" placeholder="Name" onChange={handleName} />
-          {emailval && <span>name required</span>}
+
           <H1>Email</H1>
           <Input
             type="text"
