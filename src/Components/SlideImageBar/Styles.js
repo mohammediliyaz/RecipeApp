@@ -82,6 +82,22 @@ export const Button = styled.button`
   padding: 10px;
   font-size: 18px;
   font-family: ${(props) => props.theme.fontFamily.Opensans};
+  color: ${(props) => props.theme.colors.black};
+  background-color: #f2f2f2;
+  transition: all 0.2s ease-in-out;
+  border: none;
+  &:focus {
+    outline: none;
+  }
+  &:hover {
+    cursor: pointer;
+  }
+`;
+
+export const ButtonSelected = styled.button`
+  padding: 10px;
+  font-size: 18px;
+  font-family: ${(props) => props.theme.fontFamily.Opensans};
   color: ${(props) => props.theme.colors.white};
   background-color: ${(props) => props.theme.color};
   transition: all 0.2s ease-in-out;
@@ -93,7 +109,3 @@ export const Button = styled.button`
     cursor: pointer;
   }
 `;
-
-// export const buttonchange = styled.button`
-// background-color: ${(props) => props.bgcolor}
-// `;

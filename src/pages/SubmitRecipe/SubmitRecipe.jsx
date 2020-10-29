@@ -72,17 +72,6 @@ function SubmitRecipe() {
     return validate;
   };
 
-  // useEffect(() => {
-  //   axios.get(`https://foodrecipejson.firebaseio.com/.json`).then((res) => {
-  //     const v = res.data.RecipeList;
-
-  //     recipeLength = v.length;
-  //   });
-  // });
-  // const calIndex = () => {
-  //   return recipeLength + 1;
-  // };
-
   const handleButton = () => {
     if (validation()) {
       const postData = {
@@ -97,7 +86,6 @@ function SubmitRecipe() {
         rating: rating,
         servings: servings,
         tag: recipeCategory,
-        // index: calIndex(),
       };
       return axios
         .post(
