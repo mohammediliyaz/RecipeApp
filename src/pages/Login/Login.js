@@ -61,7 +61,7 @@ export default function Login() {
       <Section>
         <H1>Login</H1>
         <form>
-          {error && <Span>Email or passowrd not valid</Span>}
+          {error && <Span>Email or passoword not valid</Span>}
           {success && <Span style={{ color: "green" }}>Login successful</Span>}
           <H1>Email</H1>
           <Input type="text" placeholder="Email" onChange={handleEmail} />

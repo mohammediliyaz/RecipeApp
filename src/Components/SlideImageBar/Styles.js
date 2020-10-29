@@ -2,6 +2,7 @@ import styled from "styled-components";
 
 export const Img = styled.img`
   height: 25rem;
+  object-fit: cover;
   width: 100%;
   background-color: #333;
   position: relative;
@@ -76,4 +77,19 @@ export const ViewRecipeButton = styled.button`
 export const Li = styled.li`
   list-style-type: none;
   font-size: 12px;
+`;
+export const Button = styled.button`
+  padding: 10px;
+  font-family: ${(props) => props.theme.fontFamily.Opensans};
+  color: ${(props) => props.theme.colors.white};
+  background-color: ${(props) => props.theme.color};
+  transition: all 0.2s ease-in-out;
+
+  border: none;
+  &:focus {
+    outline: none;
+  }
+  &:hover {
+    cursor: pointer;
+  }
 `;

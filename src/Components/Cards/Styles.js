@@ -18,6 +18,7 @@ export const H2 = styled.h2`
 
 export const Img = styled.img`
   width: 100%;
+  object-fit: cover;
   height: 187px;
   z-index: 1;
   &:hover {

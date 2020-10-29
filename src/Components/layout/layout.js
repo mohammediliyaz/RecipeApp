@@ -20,7 +20,7 @@ export default function Layout() {
   }, []);
 
   const getSuggestions = (value) => {
-    const inputValue = value.trim().toLowerCase();
+    const inputValue = value.toLowerCase();
     const inputLength = inputValue.length;
 
     return inputLength === 0

@@ -1,6 +1,6 @@
 import React from "react";
-import { Button } from "../commonComponents/Button/Style";
-import { DivBar } from "./Styles";
+// import { Button } from "../commonComponents/Button/Style";
+import { DivBar, Button } from "./Styles";
 
 export default function ImageCarouselBar(props) {
   const dat = [...props.data].splice(0, 4);
@@ -11,7 +11,7 @@ export default function ImageCarouselBar(props) {
         <Button
           key={Index}
           style={{ fontSize: "20px" }}
-          onClick={() =>
+          onClick={() => {
             props.clickHandler({
               imageName: button.bannerimage,
               recipeType: button.tag,
@@ -20,8 +20,8 @@ export default function ImageCarouselBar(props) {
               time: button.min,
               chef: button.chef,
               num: button.servings,
-            })
-          }
+            });
+          }}
         >
           {button.name}
         </Button>

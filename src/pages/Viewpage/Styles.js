@@ -2,6 +2,7 @@ import styled from "styled-components";
 
 export const Img = styled.img`
   height: 15rem;
+  object-fit: cover;
   width: 100%;
   position: relative;
 `;
