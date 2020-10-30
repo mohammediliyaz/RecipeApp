@@ -17,11 +17,7 @@ function Dropdown(props) {
     return list.map((item, index) => {
       return (
         <li key={item.title + index}>
-          <Link
-            className={item.cName}
-            to={item.path}
-            onClick={() => setClick(!false)}
-          >
+          <Link className={item.cName} onClick={() => setClick(!false)}>
             {item.title}
           </Link>
         </li>

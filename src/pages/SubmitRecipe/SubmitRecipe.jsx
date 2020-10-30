@@ -1,12 +1,11 @@
 import React, { useState, useEffect } from "react";
-import { Button } from "../../Components/commonComponents/Button/Style";
+
 import Footer from "../../Components/Footer/Footer";
 import Navabar from "../../Components/Navbar/Navbar";
-import { Div, Form, Input, TextArea, Span, H2 } from "./Styles";
+import { Div, Form, Input, TextArea, Span, H2, Button } from "./Styles";
 import axios from "axios";
 
 function SubmitRecipe() {
-  // let recipeLength;
   const [showMsg, setShowMsg] = useState(1);
 
   const [recipeName, setrecipeName] = useState("");
@@ -167,12 +166,7 @@ function SubmitRecipe() {
         <br></br>
       </Form>
       <div style={{ display: "inline" }}>
-        <Button
-          style={{ margin: "2rem 0 2rem 10.5rem", width: "7rem" }}
-          onClick={handleButton}
-        >
-          SUBMIT
-        </Button>
+        <Button onClick={handleButton}>SUBMIT</Button>
         {showMsg === 3 && <Span>feild is empty</Span>}
         {showMsg === 2 && (
           <Span style={{ color: "green" }}>Submitted successfully!!!</Span>

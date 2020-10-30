@@ -20,7 +20,7 @@ export default function Layout() {
   }, []);
 
   const getSuggestions = (value) => {
-    const inputValue = value.toLowerCase();
+    const inputValue = value;
     const inputLength = inputValue.length;
 
     return inputLength === 0
@@ -28,7 +28,8 @@ export default function Layout() {
       : setFiltered(idata.filter((e) => e.name.toLowerCase().includes(value)));
   };
   const clickHandler = (searchRecipe) => {
-    getSuggestions(searchRecipe);
+    let value = searchRecipe.toLowerCase();
+    getSuggestions(value);
   };
 
   const displayCards = () => {

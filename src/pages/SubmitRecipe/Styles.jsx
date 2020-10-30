@@ -59,3 +59,33 @@ export const H2 = styled.h2`
   color: ${(props) => props.theme.colors.Zambezi};
   font-family: ${(props) => props.theme.fontFamily.Opensans};
 `;
+
+export const Button = styled.button`
+  padding: 10px;
+  font-family: ${(props) => props.theme.fontFamily.Opensans};
+  color: ${(props) => props.theme.colors.white};
+  background-color: ${(props) => props.theme.color};
+  transition: all 0.2s ease-in-out;
+  margin: 2rem 0 2rem 10.5rem;
+  width: 7rem;
+  border: none;
+  &:focus {
+    outline: none;
+  }
+  &:hover {
+    cursor: pointer;
+  }
+  @media screen and (max-width: 768px) {
+    margin: 2rem 0 2rem 3.8rem;
+  }
+  @media screen and (max-width: 768px) {
+    margin: 2rem 0 2rem 2.2rem;
+  }
+  @media screen and (max-width: 768px) {
+  }
+  @media screen and (max-width: 768px) {
+    margin: 2rem 0 2rem 1rem;
+    padding: 5px;
+    width: 5rem;
+  }
+`;

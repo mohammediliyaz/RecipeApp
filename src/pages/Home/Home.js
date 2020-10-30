@@ -19,7 +19,7 @@ export default function Home() {
         </div>
       );
     else {
-      alert("Unuathorized");
+      alert("Unauthorized");
       history.push("/");
     }
   };

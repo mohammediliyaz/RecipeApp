@@ -7,9 +7,7 @@ export const Div = styled.div`
 `;
 
 export const Section = styled.section`
-margin:6rem 0 22rem 0;
-border: 1px solid black:
-
+  margin: 6rem 0 22rem 0;
 `;
 
 export const Input = styled.input`
@@ -23,7 +21,7 @@ export const Input = styled.input`
 export const LoginButtons = styled.div`
   margin: 20px;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
 `;
 export const Button = styled.button`
   padding: 10px;
@@ -42,6 +40,7 @@ export const H1 = styled.h1`
 
 export const Inputt = styled.input`
   width: 90%;
+
   color: ${(props) => props.theme.colors.green};
   padding: 10px;
   position: relative;
@@ -62,26 +61,26 @@ export const Inputt = styled.input`
 export const InputPassLogin = styled.p`
   position: absolute;
   right: 40px;
-  top: 310px;
+  top: 300px;
   &:hover {
     color: green;
     cursor: pointer;
   }
   @media screen and (max-width: 768px) {
-    top: 215px;
-    right: 18px;
+    top: 225px;
+    right: 10px;
   }
   @media screen and (max-width: 425px) {
-    right: 150px;
-    top: 220px;
+    right: 40px;
+    top: 260px;
   }
   @media screen and (max-width: 375px) {
-    right: 100px;
-    top: 220px;
+    right: 40px;
+    top: 262px;
   }
   @media screen and (max-width: 320px) {
-    right: 100px;
-    top: 217px;
-    font-size: 13px;
+    right: 20px;
+    top: 250px;
+    font-size: 16px;
   }
 `;

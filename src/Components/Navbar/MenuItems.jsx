@@ -20,7 +20,7 @@ export const MenuItemsRecipe = [
   },
   {
     title: "Recipe page 1",
-    path: "/Recipepage1",
+
     cName: "dropdown-link",
   },
   {

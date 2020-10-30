@@ -12,6 +12,7 @@ export const theme = {
     white: "#fff",
     Zambezi: "#606060",
     green: "#8dc63f",
+    black: "#000",
   },
   fontFamily: {
     Arvoserif: "Arvo, serif",

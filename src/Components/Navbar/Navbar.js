@@ -6,12 +6,17 @@ import { Nav, MenuIcon, Img, Li } from "./Styles";
 import history from "../../history/History";
 
 function Navabar() {
+  let homeHover = false;
   const [click, setClick] = useState(false);
   const [dropdown, setDropdown] = useState("");
-  const [homeHover, setHomehover] = useState(false);
-
   const handleClick = () => setClick(!click);
-  const closeMobileMenu = () => setClick(false);
+  const closeMobileMenu = () => {
+    setClick(false);
+  };
+  const closeMobileRMenu = () => {
+    setClick(false);
+    history.push("/Recipepage1");
+  };
   const logout = () => {
     localStorage.removeItem("key");
   };
@@ -62,7 +67,7 @@ function Navabar() {
           onMouseEnter={() => onMouseEnter("recipe")}
           onMouseLeave={onMouseLeave}
         >
-          <p className="nav-links" onClick={closeMobileMenu}>
+          <p className="nav-links" onClick={closeMobileRMenu}>
             Recipes <i className="fas fa-caret-down" />
           </p>
           {dropdown === "recipe" && <Dropdown type="recipe" />}

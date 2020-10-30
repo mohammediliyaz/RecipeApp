@@ -14,21 +14,22 @@ export const Section = styled.section`
   width: 100%;
 
   @media screen and (max-width: 768px) {
-    margin: 0 1rem 0 0;
+    margin: 0 0.5rem 0rem 0;
   }
   @media screen and (max-width: 425px) {
-    width: 110%;
-    margin: 1rem 0 0rem 1rem;
+    width: 135%;
+    margin: 3rem 0 0rem 1rem;
   }
   @media screen and (max-width: 320px) {
-    margin: 1rem 0 0rem 1rem;
+    margin: 3rem 0 0rem 1rem;
   }
 `;
 
 export const Input = styled.input`
   width: 90%;
+  font-size: 1.3rem;
   color: ${(props) => props.theme.colors.green};
-  padding: 10px;
+  padding: 2px;
   position: relative;
   border: none;
   outline: none;
@@ -37,24 +38,32 @@ export const Input = styled.input`
     outline: none;
   }
   @media screen and (max-width: 768px) {
+    font-size: 16px;
+    width: 94%;
     padding: 10px;
   }
   @media screen and (max-width: 425px) {
     padding: 7px;
+    width: 113%;
+  }
+  @media screen and (max-width: 375px) {
+    padding: 7px;
+    width: 94%;
   }
   @media screen and (max-width: 320px) {
     padding: 5px;
+    width: 94%;
   }
 `;
 export const LoginButtons = styled.div`
   margin: 20px;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
 `;
 export const Button = styled.button`
   padding: 10px;
-  width: 9rem;
-  font-size: 20px;
+  width: 7rem;
+  font-size: 16px;
   border: none;
   border-radius: 20px;
 
@@ -73,59 +82,59 @@ export const Button = styled.button`
   @media screen and (max-width: 320px) {
     width: 4rem;
     padding: 2px;
-    font-size: 13px;
+    font-size: 16px;
   }
 `;
 export const InputPassone = styled.p`
   position: absolute;
-  right: 40px;
-  top: 518px;
+  right: 47px;
+  top: 489px;
   &:hover {
     color: green;
     cursor: pointer;
   }
   @media screen and (max-width: 768px) {
-    top: 419px;
+    top: 430px;
     right: 18px;
   }
   @media screen and (max-width: 425px) {
-    right: 150px;
-    top: 410px;
+    right: 10px;
+    top: 450px;
   }
   @media screen and (max-width: 375px) {
-    right: 100px;
-    top: 410px;
+    right: 30px;
+    top: 460px;
   }
   @media screen and (max-width: 320px) {
-    right: 100px;
-    top: 400px;
-    font-size: 13px;
+    right: 20px;
+    top: 445px;
+    font-size: 15px;
   }
 `;
 export const InputPasstwo = styled.p`
   position: absolute;
-  right: 40px;
-  top: 619px;
+  right: 47px;
+  top: 589px;
   &:hover {
     color: green;
     cursor: pointer;
   }
   @media screen and (max-width: 768px) {
-    top: 520px;
     right: 18px;
+    top: 540px;
   }
   @media screen and (max-width: 425px) {
-    right: 150px;
-    top: 510px;
+    right: 20px;
+    top: 550px;
   }
   @media screen and (max-width: 375px) {
-    right: 100px;
-    top: 510px;
+    right: 30px;
+    top: 560px;
   }
   @media screen and (max-width: 320px) {
-    right: 100px;
-    top: 495px;
-    font-size: 13px;
+    right: 20px;
+    top: 540px;
+    font-size: 15px;
   }
 `;
 export const Img = styled.img`
