@@ -167,7 +167,7 @@ function SubmitRecipe() {
       </Form>
       <div style={{ display: "inline" }}>
         <Button onClick={handleButton}>SUBMIT</Button>
-        {showMsg === 3 && <Span>feild is empty</Span>}
+        {showMsg === 3 && <Span>Feild is empty</Span>}
         {showMsg === 2 && (
           <Span style={{ color: "green" }}>Submitted successfully!!!</Span>
         )}
