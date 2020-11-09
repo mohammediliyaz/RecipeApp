@@ -5,7 +5,7 @@ import Search from "../../Components/layout/Search";
 import Author from "../../Components/Author/Author";
 import PopularRecipe from "../../Components/PopularRecipe/PopularRecipe";
 import Navabar from "../../Components/Navbar/Navbar";
-import Footer from "../../Components/Footer/Footer";
+import Footer from "../../Components/Footer/footer";
 import "./Styles.css";
 import Ingridents from "./Ingridents";
 import Directions from "./Directions";

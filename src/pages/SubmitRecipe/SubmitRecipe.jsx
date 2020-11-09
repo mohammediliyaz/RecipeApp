@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 
-import Footer from "../../Components/Footer/Footer";
+import Footer from "../../Components/Footer/footer";
 import Navabar from "../../Components/Navbar/Navbar";
 import { Div, Form, Input, TextArea, Span, H2, Button } from "./Styles";
 import axios from "axios";
