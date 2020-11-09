@@ -1,16 +1,19 @@
 import React, { useState } from "react";
-
+import { useContext } from "react";
+import { ThemechangeContext } from "../../App";
 import { DivBar, Button, ButtonSelected } from "./Styles";
 
 export default function ImageCarouselBar(props) {
   const dat = [...props.data].splice(0, 4);
   const [select, setSelect] = useState("Mexican Grilled Corn Recipe");
+  const color = useContext(ThemechangeContext);
 
   const display = () => {
     if (dat !== undefined && dat.length !== 0) {
       return dat.map((button, Index) =>
         select === button.name ? (
           <ButtonSelected
+            style={{ backgroundColor: color }}
             key={Index + button.name}
             onClick={() => {
               props.clickHandler({

@@ -5,6 +5,11 @@ import "../Navbar/Navbar.css";
 import { Nav, MenuIcon, Img, Li } from "./Styles";
 import history from "../../history/History";
 
+import { toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+
+toast.configure();
+
 function Navabar() {
   let homeHover = false;
   const [click, setClick] = useState(false);
@@ -18,7 +23,10 @@ function Navabar() {
     history.push("/Recipepage1");
   };
   const logout = () => {
-    localStorage.removeItem("key");
+    toast.error("logout successfully", {
+      position: toast.POSITION.TOP_CENTER,
+      autoClose: 2000,
+    });
   };
 
   const onMouseEnter = (d) => {

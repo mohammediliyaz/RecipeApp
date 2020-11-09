@@ -12,13 +12,19 @@ import {
 import { InputPassLogin } from "./LoginStyles";
 import img from "../../Assets/images/loginimage.jpeg";
 import history from "../../history/History";
-import axios from "axios";
+// import axios from "axios";
+import { useDispatch } from "react-redux";
+
 export default function Login() {
+  // let uniqueid;
   const [email, setEmail] = useState("");
   const [error, setError] = useState(false);
-  const [success, setSuccess] = useState(false);
   const [pass, setPass] = useState("");
   const [hidden, setHidden] = useState(true);
+
+  // const tokenid = useSelector((state) => state.tokenid);
+  const dispatch = useDispatch();
+
   const handleDisplay = () => {
     setHidden(!hidden);
   };
@@ -29,20 +35,27 @@ export default function Login() {
       password: pass,
       returnSecureToken: true,
     };
+    const url =
+      "https://www.googleapis.com/identitytoolkit/v3/relyingparty/verifyPassword?key=AIzaSyBBTcBYXnaAmM1YEg6QLpggdBscZJXVJfk";
 
-    return axios
-      .post(
-        "https://www.googleapis.com/identitytoolkit/v3/relyingparty/verifyPassword?key=AIzaSyBBTcBYXnaAmM1YEg6QLpggdBscZJXVJfk",
-        postData
-      )
-      .then((res) => {
-        if (res.status === 200) {
-          localStorage.setItem("key", res.data.localId);
-          setSuccess(true);
-          history.push("/home");
-        }
-      })
-      .catch(() => setError(true));
+    dispatch({ type: "login", payload: postData, url: url });
+
+    // return axios
+    //   .post(
+    //     "https://www.googleapis.com/identitytoolkit/v3/relyingparty/verifyPassword?key=AIzaSyBBTcBYXnaAmM1YEg6QLpggdBscZJXVJfk",
+    //     postData
+    //   )
+    //   .then((res) => {
+    //     if (res.status === 200) {
+    //       //  localStorage.setItem("key", res.data.idToken);
+    //       uniqueid = res.data.localId;
+    //       history.push("/home");
+    //       {
+    //         return dispatch({ type: "login", value: uniqueid });
+    //       }
+    //     }
+    //   })
+    //   .catch(() => setError(true));
   };
 
   const handleEmail = (e) => {
@@ -62,7 +75,7 @@ export default function Login() {
         <H1>Login</H1>
         <form>
           {error && <Span>Email or passoword not valid</Span>}
-          {success && <Span style={{ color: "green" }}>Login successful</Span>}
+
           <H1>Email</H1>
           <Input type="text" placeholder="Email" onChange={handleEmail} />
 

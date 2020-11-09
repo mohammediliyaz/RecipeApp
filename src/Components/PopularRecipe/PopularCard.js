@@ -1,10 +1,12 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import history from "../../history/History";
+import { ThemechangeContext } from "../../App";
 
 import { Entity, Content, Img, Contentr, Button } from "./Styles";
 
 function PopularCard(props) {
   const [show, setShow] = useState(false);
+  const color = useContext(ThemechangeContext);
   const callStars = () => {
     let ret = [];
     for (let i = 0; i < props.rating; i++) {
@@ -28,7 +30,10 @@ function PopularCard(props) {
           onMouseLeave={() => setShow(show)}
         />
         {show && (
-          <Button onClick={() => history.push("/Recipepage1")}>
+          <Button
+            onClick={() => history.push("/Recipepage1")}
+            style={{ backgroundColor: color }}
+          >
             <i className="fa fa-share" style={{ color: "white" }} />
           </Button>
         )}

@@ -68,7 +68,7 @@ export const Button = styled.button`
   border-radius: 20px;
 
   &:hover {
-    background-color: ${(props) => props.theme.color};
+    background-color: rgb(141, 198, 63);
     cursor: pointer;
   }
   &:focus {

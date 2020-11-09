@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from "react";
-
+import React, { useState, useContext } from "react";
+import { ThemechangeContext } from "../../App";
 import Footer from "../../Components/Footer/Footer";
 import Navabar from "../../Components/Navbar/Navbar";
 import { Div, Form, Input, TextArea, Span, H2, Button } from "./Styles";
@@ -17,6 +17,7 @@ function SubmitRecipe() {
   const [chef, setchef] = useState("");
   const [rating, setrating] = useState("");
   const [discription, setdiscription] = useState("");
+  const color = useContext(ThemechangeContext);
 
   const handlediscription = (e) => {
     setShowMsg(1);
@@ -166,7 +167,9 @@ function SubmitRecipe() {
         <br></br>
       </Form>
       <div style={{ display: "inline" }}>
-        <Button onClick={handleButton}>SUBMIT</Button>
+        <Button style={{ backgroundColor: color }} onClick={handleButton}>
+          SUBMIT
+        </Button>
         {showMsg === 3 && <Span>feild is Empty</Span>}
         {showMsg === 2 && (
           <Span style={{ color: "green" }}>Submitted successfully!!!</Span>
