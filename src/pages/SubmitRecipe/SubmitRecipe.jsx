@@ -7,7 +7,6 @@ import axios from "axios";
 
 function SubmitRecipe() {
   const [showMsg, setShowMsg] = useState(1);
-
   const [recipeName, setrecipeName] = useState("");
   const [prepartionTime, setpreparationTime] = useState("");
   const [cookingTime, setcookingTime] = useState("");

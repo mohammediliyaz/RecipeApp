@@ -82,7 +82,7 @@ export const Button = styled.button`
   padding: 10px;
   font-size: 18px;
   font-family: ${(props) => props.theme.fontFamily.Opensans};
-  color: ${(props) => props.theme.colors.black};
+  color: ${(props) => props.theme.colors.lightBlack};
   background-color: #f2f2f2;
   transition: all 0.2s ease-in-out;
   border: none;

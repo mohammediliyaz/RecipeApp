@@ -8,7 +8,7 @@ import {
   ListContainer,
   Input,
   FooterBottom,
-} from "../Footer/styles";
+} from "./styles";
 import { ThemechangeContext } from "../../App";
 import { Button } from "../commonComponents/Button/Style";
 

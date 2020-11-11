@@ -37,11 +37,13 @@ export default function Cards(props) {
       )}
 
       <H2>{props.recipe}</H2>
-      <p>
-        <i className="fa fa-clock"></i>
-        {props.time}
-      </p>
       <p>Ratings : {callStars()}</p>
+      <div style={{ display: "flex", justifyContent: "flex-end" }}>
+        <p>
+          <i className="fa fa-clock"></i>
+          {props.time}
+        </p>
+      </div>
     </Div>
   );
 }

@@ -14,6 +14,10 @@ import {
 import history from "../../history/History";
 import img from "../../Assets/images/loginimage.jpeg";
 import axios from "axios";
+import { toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+
+toast.configure();
 
 export default function Signup() {
   const [emailval, setEmailVal] = useState(false);
@@ -77,8 +81,6 @@ export default function Signup() {
     // const info = [name, username, email, password];
     // info.every((e) => (e === "" ? alert(" field is empty") : true));
 
-    //password validation
-
     const postData = {
       email: email,
       password: password,
@@ -92,12 +94,20 @@ export default function Signup() {
       )
       .then((res) => {
         if (res.status === 200) {
+          toast.success("signup successful", {
+            position: toast.POSITION.TOP_CENTER,
+            autoClose: 4000,
+          });
           history.push("/");
-        } else {
-          alert("Not success");
         }
       })
-      .catch((error) => console.log(error));
+      .catch((error) => {
+        console.log(error);
+        toast.error("Signup Unsuccessful", {
+          position: toast.POSITION.TOP_CENTER,
+          autoClose: 4000,
+        });
+      });
   };
 
   return (
@@ -116,6 +126,7 @@ export default function Signup() {
             onChange={handleEmail}
             onBlur={emailvalidate}
           />
+          <br />
           {emailval && <Span>badly formatted</Span>}
           <H1>UserName</H1>
           <Input type="text" placeholder="UserName" onChange={handleUsername} />

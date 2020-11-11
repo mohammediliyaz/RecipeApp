@@ -23,7 +23,7 @@ function Navabar() {
     history.push("/Recipepage1");
   };
   const logout = () => {
-    toast.error("logout successfully", {
+    toast.success("logout successfully", {
       position: toast.POSITION.TOP_CENTER,
       autoClose: 2000,
     });

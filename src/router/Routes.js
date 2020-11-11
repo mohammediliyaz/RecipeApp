@@ -28,7 +28,7 @@ export default function Routing() {
             <Route path={"/Recipepage1"} exact strict component={ViewRecipe} />{" "}
           </Switch>
         ) : (
-          <Route path={"/"} exact strict component={Login} />
+          history.push("/")
         )}
       </Switch>
     </Router>

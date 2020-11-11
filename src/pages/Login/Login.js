@@ -1,14 +1,5 @@
 import React, { useState } from "react";
-import {
-  Div,
-  Section,
-  Input,
-  LoginButtons,
-  Button,
-  Img,
-  H1,
-  Span,
-} from "./Styles";
+import { Div, Section, Input, LoginButtons, Button, Img, H1 } from "./Styles";
 import { InputPassLogin } from "./LoginStyles";
 import img from "../../Assets/images/loginimage.jpeg";
 import history from "../../history/History";
@@ -18,7 +9,7 @@ import { useDispatch } from "react-redux";
 export default function Login() {
   // let uniqueid;
   const [email, setEmail] = useState("");
-  const [error, setError] = useState(false);
+  // const [error, setError] = useState(false);
   const [pass, setPass] = useState("");
   const [hidden, setHidden] = useState(true);
 
@@ -39,32 +30,15 @@ export default function Login() {
       "https://www.googleapis.com/identitytoolkit/v3/relyingparty/verifyPassword?key=AIzaSyBBTcBYXnaAmM1YEg6QLpggdBscZJXVJfk";
 
     dispatch({ type: "login", payload: postData, url: url });
-
-    // return axios
-    //   .post(
-    //     "https://www.googleapis.com/identitytoolkit/v3/relyingparty/verifyPassword?key=AIzaSyBBTcBYXnaAmM1YEg6QLpggdBscZJXVJfk",
-    //     postData
-    //   )
-    //   .then((res) => {
-    //     if (res.status === 200) {
-    //       //  localStorage.setItem("key", res.data.idToken);
-    //       uniqueid = res.data.localId;
-    //       history.push("/home");
-    //       {
-    //         return dispatch({ type: "login", value: uniqueid });
-    //       }
-    //     }
-    //   })
-    //   .catch(() => setError(true));
   };
 
   const handleEmail = (e) => {
     setEmail(e.target.value);
-    setError(false);
+    // setError(false);
   };
   const handlePass = (e) => {
     setPass(e.target.value);
-    setError(false);
+    // setError(false);
   };
 
   return (
@@ -74,10 +48,16 @@ export default function Login() {
       <Section>
         <H1>Login</H1>
         <form>
-          {error && <Span>Email or passoword not valid</Span>}
+          {/* {error && <Span>Email or passoword not valid</Span>} */}
 
           <H1>Email</H1>
-          <Input type="text" placeholder="Email" onChange={handleEmail} />
+          <Input
+            type="email"
+            placeholder="Email"
+            id="email"
+            autoComplete="on"
+            onChange={handleEmail}
+          />
 
           <H1>Password</H1>
           <Input
