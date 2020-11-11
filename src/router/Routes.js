@@ -16,7 +16,7 @@ export default function Routing() {
       <Switch>
         <Route path={"/"} exact strict component={Login} />
         <Route path={"/signup"} exact strict component={Signup} />
-        {tokenid ? (
+        {true ? (
           <Switch>
             <Route path={"/Home"} exact component={Home} />
             <Route

@@ -2,6 +2,7 @@ import styled from "styled-components";
 
 export const Div = styled.div`
   height: 100%;
+  box-sizing: border-box;
   background-color: lightgray;
   padding: 10px;
   padding-left: 10rem;
@@ -40,6 +41,9 @@ export const Input = styled.input`
   &:focus {
     outline: none;
   }
+  @media screen and (max-width: 425px) {
+    width: 90%;
+  }
 `;
 
 export const TextArea = styled.textarea`
@@ -47,6 +51,9 @@ export const TextArea = styled.textarea`
   width: 95%;
   &:focus {
     outline: none;
+  }
+  @media screen and (max-width: 425px) {
+    width: 90%;
   }
 `;
 export const Span = styled.span`

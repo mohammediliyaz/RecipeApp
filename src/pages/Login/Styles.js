@@ -1,32 +1,34 @@
 import styled from "styled-components";
 export const Div = styled.div`
   display: grid;
+  width: 100%;
 
-  grid-template-columns: 59% 40%;
-  justify-content: space-between;
+  box-sizing: border-box;
+  grid-template-columns: 59% 41%;
+  grid-column-gap: 0px;
   @media screen and (max-width: 425px) {
     grid-template-columns: auto;
+    grid-column-gap: 0px;
   }
 `;
 
 export const Section = styled.section`
-  margin: 6rem 0 16rem 0;
-  width: 100%;
+  margin: 6rem 0 0 0;
 
+  width: 100%;
   @media screen and (max-width: 768px) {
-    margin: 0 0.5rem 0rem 0;
+    margin: 0 0rem 0rem 0;
   }
   @media screen and (max-width: 425px) {
-    width: 135%;
-    margin: 3rem 0 0rem 1rem;
+    margin: 3rem 0 0rem 0rem;
   }
   @media screen and (max-width: 320px) {
-    margin: 3rem 0 0rem 1rem;
+    margin: 3rem 0 0rem 0rem;
   }
 `;
 
 export const Input = styled.input`
-  width: 90%;
+  width: 98%;
   font-size: 1.3rem;
   color: ${(props) => props.theme.colors.green};
   padding: 2px;
@@ -39,20 +41,20 @@ export const Input = styled.input`
   }
   @media screen and (max-width: 768px) {
     font-size: 16px;
-    width: 94%;
+    width: 90%;
     padding: 10px;
   }
   @media screen and (max-width: 425px) {
     padding: 7px;
-    width: 113%;
+    // width: 100%;
   }
   @media screen and (max-width: 375px) {
     padding: 7px;
-    width: 94%;
+    // width: 100%;
   }
   @media screen and (max-width: 320px) {
     padding: 5px;
-    width: 94%;
+    // width: 100%;
   }
 `;
 export const LoginButtons = styled.div`
@@ -63,7 +65,7 @@ export const LoginButtons = styled.div`
 export const Button = styled.button`
   padding: 10px;
   width: 7rem;
-  font-size: 16px;
+  font-size: 1.5vw;
   border: none;
   border-radius: 20px;
 
@@ -76,14 +78,14 @@ export const Button = styled.button`
   }
   @media screen and (max-width: 425px) {
     width: 6rem;
+    font-size: 4vw;
     padding: 5px;
-    font-size: 16x;
-  }
+    
   @media screen and (max-width: 320px) {
-    width: 4rem;
-    padding: 2px;
-    font-size: 16px;
-  }
+    width: 6rem;
+    padding: 5px;
+    font-size: 5vw;
+    
 `;
 export const InputPassone = styled.p`
   position: absolute;
