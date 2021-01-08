@@ -25,13 +25,17 @@ export default function Cards(props) {
   return (
     <Div>
       <Img
+        className="Img"
         src={require(`../../Assets/images/${props.image}.jpg`)}
         alt=""
         onMouseEnter={() => setShow(!show)}
         onMouseLeave={() => setShow(show)}
       />
       {show && (
-        <Viewbutton onClick={() => history.push("/Recipepage1")}>
+        <Viewbutton
+          className="Viewbutton"
+          onClick={() => history.push("/Recipepage1")}
+        >
           VIEW RECIPE
         </Viewbutton>
       )}

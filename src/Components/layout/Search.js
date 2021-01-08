@@ -16,6 +16,7 @@ export default function Search(props) {
   return (
     <SearchDiv>
       <Input
+        className="InputField"
         type="text"
         autocomplete="on"
         placeholder="search for recipes"

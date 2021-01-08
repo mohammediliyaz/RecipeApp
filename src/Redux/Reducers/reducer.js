@@ -6,6 +6,7 @@ toast.configure();
 
 const initialState = {
   tokenid: null,
+  loading: true,
 };
 
 const reducer = (state = initialState, action) => {
@@ -14,11 +15,13 @@ const reducer = (state = initialState, action) => {
   if (action.type === "LOGIN_ASYNC") {
     history.push("/Home");
     newState.tokenid = action.value;
+
     sessionStorage.setItem("key", action.value);
     toast.success("login successfully", {
       position: toast.POSITION.TOP_CENTER,
       autoClose: 2000,
     });
+    newState.loading = false;
   }
   if (action.type === "LOGIN_ASYNC_ERROR") {
     console.log(action.error);
